@@ -61,3 +61,5 @@ typedef struct NNUEEvaluator {
     NNUEAccumulator *current;                   // Pointer of the current stack location
     NNUEAccumulatorTableEntry table[SQUARE_NB]; // Finny table with Accumulators for each square
 } NNUEEvaluator;
+
+
