@@ -1,0 +1,8 @@
+{
+    "files.associations": {
+        "syzygy.h": "c",
+        "history.h": "c",
+        "types.h": "c",
+        "*.net": "c"
+    }
+}
