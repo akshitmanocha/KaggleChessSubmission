@@ -1,4 +1,3 @@
-
 #ifndef ANTARESCHESSENGINE_CONSTANTS_H
 #define ANTARESCHESSENGINE_CONSTANTS_H
 
@@ -13,7 +12,8 @@
 #define FAIL_HIGH_STATS_COUNT       5
 #define ALPHA_RAISE_STATS_COUNT     5
 
-#define BENCH_DEPTH                 14
+// Reduced
+#define BENCH_DEPTH                 10
 
 #define START_FEN "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - "
 #define KIWIPETE_FEN "r3k2r/p1ppqpb1/bn2pnp1/3PN3/1p2P3/2N2Q1p/PPPBBPPP/R3K2R w KQkq - "
@@ -29,17 +29,20 @@ constexpr SCORE_TYPE NO_EVALUATION = 500000;
 constexpr SCORE_TYPE MATE_SCORE = 100000;
 constexpr SCORE_TYPE MATE_BOUND = 99000;
 
-#define MAX_AB_DEPTH        256
-#define TOTAL_MAX_DEPTH     512
-#define MAX_TT_SIZE         2666666
+// Reduced
+#define MAX_AB_DEPTH        64
+#define TOTAL_MAX_DEPTH     128
+#define MAX_TT_SIZE         131072
 
 #define HASH_FLAG_EXACT     0
 #define HASH_FLAG_ALPHA     1
 #define HASH_FLAG_BETA      2
 
-#define MINIMUM_ASP_DEPTH   6
+// Reduced
+#define MINIMUM_ASP_DEPTH   4
 
-constexpr size_t MAX_MOVES = 256;
+// Reduced
+constexpr size_t MAX_MOVES = 128;
 
 enum NodeType {
     Exact_Node,
@@ -47,7 +50,9 @@ enum NodeType {
     Upper_Node
 };
 
-constexpr char PIECE_MATCHER[12] = {'P', 'N', 'B', 'R', 'Q', 'K',
-                                    'p', 'n', 'b', 'r', 'q', 'k'};
+constexpr char PIECE_MATCHER[12] = {
+    'P','N','B','R','Q','K',
+    'p','n','b','r','q','k'
+};
 
 #endif //ANTARESCHESSENGINE_CONSTANTS_H

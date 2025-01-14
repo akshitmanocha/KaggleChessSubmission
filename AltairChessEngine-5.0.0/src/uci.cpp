@@ -257,18 +257,15 @@ void UCI::uci_loop() {
             std::cout << "uciok" << std::endl;
         }
 
-        else if (tokens[0] == "setoption" && tokens.size() >= 5) {
-            if (tokens[2] == "Hash") {
-                int mb = std::stoi(tokens[4]);
-                mb = std::clamp<int>(mb, 1, 24576);
-
-                size_t entries = static_cast<size_t>(mb) * 1048576 / 24;
+            else if (tokens[0] == "setoption" && tokens.size() >= 5) {
+                if (tokens[2] == "Hash") {
+                // Hardcode the transposition table to 128 KB
+                size_t entries = (128 * 1024) / 24;
                 engine->transposition_table.resize(entries);
                 std::cout << engine->transposition_table.size() << " number of hash entries initialized" << std::endl;
-            }
+                }
 
-            else if (tokens[2] == "Threads") {
-                engine->num_threads = std::clamp(std::stoi(tokens[4]), 1, 1024);
+                else if (tokens[2] == "Threads") {  engine->num_threads = std::clamp(std::stoi(tokens[4]), 1, 1024);
                 engine->thread_states.resize(engine->num_threads);
             }
 
