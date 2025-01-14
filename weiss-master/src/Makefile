@@ -45,16 +45,16 @@ ifneq ($(findstring __BMI2__, $(PROPS)),)
 	endif
 endif
 
-# PGO
-ifneq ($(findstring gcc, $(CC)),)
-	PGO_DIR = "pgo"
-	PGO_GEN = -fprofile-generate=$(PGO_DIR)
-	PGO_USE = -fprofile-use=$(PGO_DIR)
-else ifneq ($(findstring clang, $(CC)),)
-	PGO_MERGE = llvm-profdata merge -output=weiss.profdata *.profraw
-	PGO_GEN = -fprofile-instr-generate
-	PGO_USE = -fprofile-instr-use=weiss.profdata
-endif
+# # PGO
+# ifneq ($(findstring gcc, $(CC)),)
+# 	PGO_DIR = "pgo"
+# 	PGO_GEN = -fprofile-generate=$(PGO_DIR)
+# 	PGO_USE = -fprofile-use=$(PGO_DIR)
+# else ifneq ($(findstring clang, $(CC)),)
+# 	PGO_MERGE = llvm-profdata merge -output=weiss.profdata *.profraw
+# 	PGO_GEN = -fprofile-instr-generate
+# 	PGO_USE = -fprofile-instr-use=weiss.profdata
+# endif
 
 # Try to detect windows environment by seeing
 # whether the shell filters out " or not.

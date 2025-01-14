@@ -30,7 +30,7 @@ LDFLAGS += -Wl,--strip-all
 CC   = clang
 SRC  = *.c pyrrhic/tbprobe.c
 LIBS = -lpthread -lm
-NN   = -DUSE_NNUE=0
+NN   = -DUSE_NNUE=0leaks $(pgrep your_application)
 EXE  = Ethereal
 
 WFLAGS   = -std=gnu11 -Wall -Wextra -Wshadow

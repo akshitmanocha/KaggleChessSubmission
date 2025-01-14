@@ -24,9 +24,9 @@
 
 #if USE_NNUE
 
-// void nnue_init(const char* fname);
-// void nnue_incbin_init();
-// int nnue_evaluate(Thread *thread, Board *board);
+void nnue_init(const char* fname);
+void nnue_incbin_init();
+int nnue_evaluate(Thread *thread, Board *board);
 
 #else
 

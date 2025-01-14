@@ -26,13 +26,13 @@
 
 #if defined(_WIN32) || defined(_WIN64)
 
-// INLINE void* align_malloc(size_t size) {
-//     return _mm_malloc(size, 64);
-// }
+INLINE void* align_malloc(size_t size) {
+    return _mm_malloc(size, 64);
+}
 
-// INLINE void align_free(void *ptr) {
-//     _mm_free(ptr);
-// }
+INLINE void align_free(void *ptr) {
+    _mm_free(ptr);
+}
 
 #else
 
