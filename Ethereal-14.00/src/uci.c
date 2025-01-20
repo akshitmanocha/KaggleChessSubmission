@@ -31,7 +31,7 @@
 #include "masks.h"
 #include "move.h"
 #include "movegen.h"
-#include "network.h"
+// #include "network.h"
 #include "nnue/nnue.h"
 // #include "pyrrhic/tbprobe.h"
 #include "search.h"
@@ -46,7 +46,7 @@ extern int MoveOverhead;          // Defined by time.c
 // extern unsigned TB_PROBE_DEPTH;   // Defined by syzygy.c
 extern volatile int ABORT_SIGNAL; // Defined by search.c
 extern volatile int IS_PONDERING; // Defined by search.c
-extern PKNetwork PKNN;            // Defined by network.c
+// extern PKNetwork PKNN;            // Defined by network.c
 
 pthread_mutex_t PONDERLOCK = PTHREAD_MUTEX_INITIALIZER;
 const char *StartPosition = "rnbqkbnr/pppppppp/8/8/8/8/PPPPPPPP/RNBQKBNR w KQkq - 0 1";
@@ -65,7 +65,8 @@ int main(int argc, char **argv) {
     // Initialize core components of Ethereal
     initAttacks(); initMasks(); initEval();
     initSearch(); initZobrist(); tt_init(1, 16);
-    initPKNetwork(&PKNN); nnue_incbin_init();
+    // initPKNetwork(&PKNN);
+     nnue_incbin_init();
 
     // Create the UCI-board and our threads
     threads = createThreadPool(1);

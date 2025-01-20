@@ -1,0 +1,71 @@
+desc: (none)
+cmd: ./weiss banch
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=18813669
+mem_heap_B=2192832
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=18813722
+mem_heap_B=2192840
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=18816383
+mem_heap_B=2192897
+mem_heap_extra_B=39
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=18824686
+mem_heap_B=2192897
+mem_heap_extra_B=39
+mem_stacks_B=0
+heap_tree=peak
+n2: 2192897 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2192832 0x411645: InitThreads (in /src/weiss)
+  n0: 2192832 0x4102DF: main (in /src/weiss)
+ n0: 65 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=5
+#-----------
+time=18824686
+mem_heap_B=2192840
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=18826187
+mem_heap_B=2193864
+mem_heap_extra_B=32
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=18827997
+mem_heap_B=2192840
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty

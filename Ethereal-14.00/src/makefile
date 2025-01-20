@@ -40,10 +40,11 @@ ifdef OWNER
 	SRC      = *.c nnue/*.c pyrrhic/tbprobe.c
 endif
 
-WFLAGS   = -std=gnu11 -Wall -Wextra -Wshadow
-RFLAGS   = -O3 $(WFLAGS) -DNDEBUG -flto $(NN) $(NNFLAGS) -static
-CFLAGS   = -O3 $(WFLAGS) -DNDEBUG -flto $(NN) $(NNFLAGS) -march=native
-TFLAGS   = -O3 $(WFLAGS) -DNDEBUG -flto $(NN) $(NNFLAGS) -march=native -fopenmp -DTUNE
+WFLAGS   = -std=gnu11 -Wall -Wextra -Wshadow -pedantic -Wcast-qual -fno-exceptions
+RFLAGS   = -Os -flto -fdata-sections -ffunction-sections -fno-asynchronous-unwind-tables \
+		   -fno-unwind-tables -fno-rtti -DNDEBUG -DIS_64BIT -m64 -msse $(WFLAGS) $(NN) $(NNFLAGS)
+CFLAGS   = $(RFLAGS) -march=native
+TFLAGS   = $(RFLAGS) -march=native -fopenmp -DTUNE
 PGOFLAGS = -fno-asynchronous-unwind-tables
 
 POPCNTFLAGS = -DUSE_POPCNT -mpopcnt

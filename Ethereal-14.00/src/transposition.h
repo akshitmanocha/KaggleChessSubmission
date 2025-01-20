@@ -27,7 +27,7 @@
 #include <string.h>
 
 #if defined(__linux__)
-    #include <sys/mman.h>
+    // #include <sys/mman.h>
 #endif
 
 #include "types.h"
@@ -100,8 +100,8 @@ void *tt_clear_threaded(void *cargo);
 /// an extremely high, 95%+ hit rate, generating a substantial overall speedup to Ethereal.
 
 enum {
-    PK_CACHE_KEY_SIZE = 14,
-    PK_CACHE_MASK     = 0x3FFF,
+    PK_CACHE_KEY_SIZE = 10,
+    PK_CACHE_MASK     = 0x3FF,
     PK_CACHE_SIZE     = 1 << PK_CACHE_KEY_SIZE,
 };
 

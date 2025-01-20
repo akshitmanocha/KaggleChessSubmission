@@ -28,7 +28,7 @@ int MoveOverhead = 300; // Set by UCI options
 
 double get_real_time() {
 #if defined(_WIN32) || defined(_WIN64)
-    return (double)(GetTickCount());
+    // return (double)(GetTickCount());
 #else
     struct timeval tv;
     double secsInMilli, usecsInMilli;

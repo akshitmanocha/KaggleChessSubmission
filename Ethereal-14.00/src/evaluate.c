@@ -26,8 +26,8 @@
 #include "evaluate.h"
 #include "move.h"
 #include "masks.h"
-#include "network.h"
-#include "nnue/nnue.h"
+// #include "network.h"
+// #include "nnue/nnue.h"
 #include "thread.h"
 #include "transposition.h"
 #include "types.h"
@@ -446,19 +446,19 @@ int evaluateBoard(Thread *thread, Board *board) {
         return -thread->states[thread->height-1].eval + 2 * Tempo;
 
     // Use the NNUE unless we are in an extremely unbalanced position
-    if (USE_NNUE && abs(ScoreEG(board->psqtmat)) <= 2000) {
-        eval = nnue_evaluate(thread, board);
-        eval = board->turn == WHITE  ? eval : -eval;
-    }
+    // if (USE_NNUE && abs(ScoreEG(board->psqtmat)) <= 2000) {
+    //     eval = nnue_evaluate(thread, board);
+    //     eval = board->turn == WHITE  ? eval : -eval;
+    // }
 
-    else {
+    // else {
 
         EvalInfo ei;
         initEvalInfo(thread, board, &ei);
         eval = evaluatePieces(&ei, board);
 
         pkeval = ei.pkeval[WHITE] - ei.pkeval[BLACK];
-        if (ei.pkentry == NULL) pkeval += computePKNetwork(board);
+        // if (ei.pkentry == NULL) pkeval += computePKNetwork(board);
 
         eval += pkeval + board->psqtmat;
         eval += evaluateClosedness(&ei, board);
@@ -471,7 +471,7 @@ int evaluateBoard(Thread *thread, Board *board) {
         // Scale evaluation based on remaining material
         factor = evaluateScaleFactor(board, eval);
         if (TRACE) T.factor = factor;
-    }
+    // }
 
     // Calculate the game phase based on remaining material (Fruit Method)
     phase = 4 * popcount(board->pieces[QUEEN ])

@@ -1,0 +1,133 @@
+desc: (none)
+cmd: ./Ethereal
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=16626867
+mem_heap_B=4096
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=16628259
+mem_heap_B=1944192
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=16630225
+mem_heap_B=2087808
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=16631136
+mem_heap_B=2087865
+mem_heap_extra_B=55
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=16647193
+mem_heap_B=2087865
+mem_heap_extra_B=55
+mem_stacks_B=0
+heap_tree=peak
+n3: 2087865 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1940096 0x403682: createThreadPool (in /src/Ethereal)
+  n1: 1940096 0x3: ???
+   n1: 1940096 0x1FFF000A17: ???
+    n0: 1940096 0x40BE2F: ??? (in /src/Ethereal)
+ n1: 143616 0x4036DC: createThreadPool (in /src/Ethereal)
+  n1: 143616 0x3: ???
+   n1: 143616 0x1FFF000A17: ???
+    n0: 143616 0x40BE2F: ??? (in /src/Ethereal)
+ n0: 4153 in 2 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=16647193
+mem_heap_B=2087808
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=16648244
+mem_heap_B=2088832
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=16649655
+mem_heap_B=2089856
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=16664630
+mem_heap_B=2089913
+mem_heap_extra_B=71
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=16676649
+mem_heap_B=2089856
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=16684286
+mem_heap_B=2090128
+mem_heap_extra_B=64
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=165337554
+mem_heap_B=2089104
+mem_heap_extra_B=56
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=165337586
+mem_heap_B=2088080
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=165339781
+mem_heap_B=2087808
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
