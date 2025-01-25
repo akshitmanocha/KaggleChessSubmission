@@ -1,0 +1,237 @@
+desc: (none)
+cmd: ./cfish
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=170582
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=14331228
+mem_heap_B=197632
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=96878090
+mem_heap_B=197632
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=detailed
+n2: 197632 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 196608 0x409F75: bitbases_init (in /src/Cfish-cfish_12/src/cfish)
+  n0: 196608 0x409F13: main (in /src/Cfish-cfish_12/src/cfish)
+ n0: 1024 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=96878090
+mem_heap_B=1024
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=96892588
+mem_heap_B=1296
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=96898849
+mem_heap_B=1424
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=96900556
+mem_heap_B=8390032
+mem_heap_extra_B=4064
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=96901601
+mem_heap_B=8390992
+mem_heap_extra_B=4072
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=96901653
+mem_heap_B=8402256
+mem_heap_extra_B=4080
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=96901705
+mem_heap_B=8598864
+mem_heap_extra_B=4088
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=96901757
+mem_heap_B=8615248
+mem_heap_extra_B=4096
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=96901809
+mem_heap_B=8631632
+mem_heap_extra_B=4104
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=96901861
+mem_heap_B=8890708
+mem_heap_extra_B=4124
+mem_stacks_B=0
+heap_tree=detailed
+n4: 8890708 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8388608 0x408BFE: thread_init.cold (in /src/Cfish-cfish_12/src/cfish)
+  n1: 8388608 0x4992EA6: start_thread (pthread_create.c:477)
+   n0: 8388608 0x4AA8ACE: clone (clone.S:95)
+ n1: 259076 0x408CD2: thread_init.cold (in /src/Cfish-cfish_12/src/cfish)
+  n1: 259076 0x4992EA6: start_thread (pthread_create.c:477)
+   n0: 259076 0x4AA8ACE: clone (clone.S:95)
+ n1: 196608 0x408C90: thread_init.cold (in /src/Cfish-cfish_12/src/cfish)
+  n1: 196608 0x4992EA6: start_thread (pthread_create.c:477)
+   n0: 196608 0x4AA8ACE: clone (clone.S:95)
+ n0: 46416 in 8 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=96901913
+mem_heap_B=8976211
+mem_heap_extra_B=4133
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=96901965
+mem_heap_B=9056211
+mem_heap_extra_B=4141
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=96906258
+mem_heap_B=9056215
+mem_heap_extra_B=4161
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=96909070
+mem_heap_B=9056223
+mem_heap_extra_B=4177
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=96931047
+mem_heap_B=9056231
+mem_heap_extra_B=4193
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=96931276
+mem_heap_B=9107894
+mem_heap_extra_B=4202
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=96931311
+mem_heap_B=9115894
+mem_heap_extra_B=4210
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=96931355
+mem_heap_B=9116918
+mem_heap_extra_B=4218
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=96938607
+mem_heap_B=9117942
+mem_heap_extra_B=4226
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=96940689
+mem_heap_B=9117942
+mem_heap_extra_B=4226
+mem_stacks_B=0
+heap_tree=peak
+n4: 9117942 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8388608 0x408BFE: thread_init.cold (in /src/Cfish-cfish_12/src/cfish)
+  n1: 8388608 0x4992EA6: start_thread (pthread_create.c:477)
+   n0: 8388608 0x4AA8ACE: clone (clone.S:95)
+ n0: 273650 in 15 places, all below massif's threshold (1.00%)
+ n1: 259076 0x408CD2: thread_init.cold (in /src/Cfish-cfish_12/src/cfish)
+  n1: 259076 0x4992EA6: start_thread (pthread_create.c:477)
+   n0: 259076 0x4AA8ACE: clone (clone.S:95)
+ n1: 196608 0x408C90: thread_init.cold (in /src/Cfish-cfish_12/src/cfish)
+  n1: 196608 0x4992EA6: start_thread (pthread_create.c:477)
+   n0: 196608 0x4AA8ACE: clone (clone.S:95)
+#-----------
+snapshot=24
+#-----------
+time=96940689
+mem_heap_B=9116918
+mem_heap_extra_B=4218
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=96940721
+mem_heap_B=9115894
+mem_heap_extra_B=4210
+mem_stacks_B=0
+heap_tree=empty
