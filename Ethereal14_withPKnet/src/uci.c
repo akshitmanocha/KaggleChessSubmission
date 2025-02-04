@@ -32,7 +32,7 @@
 #include "move.h"
 #include "movegen.h"
 #include "network.h"
-#include "nnue/nnue.h"
+// #include "nnue/nnue.h"
 // #include "pyrrhic/tbprobe.h"
 #include "search.h"
 #include "thread.h"
@@ -66,7 +66,8 @@ int main(int argc, char **argv) {
     // Initialize core components of Ethereal
     initAttacks(); initMasks(); initEval();
     initSearch(); initZobrist(); tt_init(1, 16);
-    initPKNetwork(); nnue_incbin_init();
+    initPKNetwork();
+    //  nnue_incbin_init();
 
     // Create the UCI-board and our threads
     threads = createThreadPool(1);
@@ -246,7 +247,7 @@ void uciSetOption(char *str, Thread **threads, int *multiPV, int *chess960) {
 
     if (strStartsWith(str, "setoption name EvalFile value ")) {
         char *ptr = str + strlen("setoption name EvalFile value ");
-        if (!strStartsWith(ptr, "<empty>")) nnue_init(ptr);
+        // if (!strStartsWith(ptr, "<empty>")) nnue_init(ptr);
         printf("info string set EvalFile to %s\n", ptr);
     }
 

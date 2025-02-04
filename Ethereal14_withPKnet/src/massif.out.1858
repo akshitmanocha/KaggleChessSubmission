@@ -1,0 +1,148 @@
+desc: (none)
+cmd: ./Ethereal
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=16626839
+mem_heap_B=262144
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=16656422
+mem_heap_B=262616
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=16656888
+mem_heap_B=291680
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=16657832
+mem_heap_B=295776
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=16659318
+mem_heap_B=295776
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=detailed
+n4: 295776 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 262144 0x403AF1: tt_init (in /src/Ethereal14_withPKnet/src/Ethereal)
+ n0: 29064 0x40D40C: initPKNetwork (in /src/Ethereal14_withPKnet/src/Ethereal)
+ n1: 4096 0x4A1CE2B: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 4096 0x4A2B73F: _IO_doallocbuf (genops.c:347)
+   n1: 4096 0x4A2B73F: _IO_doallocbuf (genops.c:342)
+    n1: 4096 0x4A2971B: _IO_file_xsgetn (fileops.c:1288)
+     n1: 4096 0x4A1DE0E: fread (iofread.c:38)
+      n0: 4096 0x40D42D: initPKNetwork (in /src/Ethereal14_withPKnet/src/Ethereal)
+ n0: 472 in 1 place, below massif's threshold (1.00%)
+#-----------
+snapshot=6
+#-----------
+time=16659318
+mem_heap_B=291680
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=16659449
+mem_heap_B=291208
+mem_heap_extra_B=24
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=16703675
+mem_heap_B=262144
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=16704530
+mem_heap_B=1743488
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=16706446
+mem_heap_B=2169792
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=16707346
+mem_heap_B=2169849
+mem_heap_extra_B=55
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=16722607
+mem_heap_B=2169849
+mem_heap_extra_B=55
+mem_stacks_B=0
+heap_tree=peak
+n4: 2169849 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 1481344 0x40DBC2: createThreadPool (in /src/Ethereal14_withPKnet/src/Ethereal)
+  n0: 1481344 0x3BFFC0: ???
+ n1: 426304 0x40DC34: createThreadPool (in /src/Ethereal14_withPKnet/src/Ethereal)
+  n0: 426304 0x3BFFC0: ???
+ n0: 262144 0x403AF1: tt_init (in /src/Ethereal14_withPKnet/src/Ethereal)
+ n0: 57 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=13
+#-----------
+time=16722607
+mem_heap_B=2169792
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=16723651
+mem_heap_B=2170816
+mem_heap_extra_B=48
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=16728013
+mem_heap_B=2169792
+mem_heap_extra_B=40
+mem_stacks_B=0
+heap_tree=empty

@@ -3,7 +3,8 @@
         "syzygy.h": "c",
         "history.h": "c",
         "types.h": "c",
-        "*.net": "c"
+        "*.net": "c",
+        "thread.h": "c"
     },
     "cmake.sourceDirectory": "/Users/akshitmanocha/Documents/Deep Learning/KaggleChessSubmission/Altair7.0"
 }

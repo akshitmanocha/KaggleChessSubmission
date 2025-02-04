@@ -31,41 +31,88 @@
 
 PKNetwork PKNN;
 
-static char *PKWeights[] = {
-    #include "weights/pknet_224x32x2.net"
-    ""
-};
-
 static int computePKNetworkIndex(int colour, int piece, int sq) {
     return (64 + 48) * colour
          + (48 * (piece == KING))
          + sq - 8 * (piece == PAWN);
 }
 
+static float half_to_float(uint16_t h) {
+    // Simple half-precision to float conversion (no error checking)
+    uint32_t sign = (h >> 15) & 0x1;
+    uint32_t exp = (h >> 10) & 0x1f;
+    uint32_t mant = h & 0x3ff;
+    
+    if (exp == 0x1f) {  // Inf/NaN
+        exp = 0xff;
+    } else if (exp == 0) {  // Denormal
+        if (mant != 0) {
+            exp = 0x7f - 14;
+            while (!(mant & 0x400)) {
+                mant <<= 1;
+                exp--;
+            }
+            mant &= 0x3ff;
+        }
+    } else {
+        exp += 0x7f - 0xf;
+    }
+    
+    uint32_t f = (sign << 31) | (exp << 23) | (mant << 13);
+    return *(float*)&f;
+}
+
 
 void initPKNetwork() {
-
-    for (int i = 0; i < PKNETWORK_LAYER1; i++) {
-
-        char weights[strlen(PKWeights[i]) + 1];
-        strcpy(weights, PKWeights[i]);
-        strtok(weights, " ");
-
-        for (int j = 0; j < PKNETWORK_INPUTS; j++)
-            PKNN.inputWeights[j][i] = atof(strtok(NULL, " "));
-        PKNN.inputBiases[i] = atof(strtok(NULL, " "));
+    const char *filename = "./weights/pknet.bin";
+    FILE *file = fopen(filename, "rb");
+    if (!file) {
+        perror("Failed to open PKNet weights file");
+        exit(EXIT_FAILURE);
     }
 
-    for (int i = 0; i < PKNETWORK_OUTPUTS; i++) {
+    // Calculate total 16-bit values needed
+    const size_t total_halfs = PKNETWORK_LAYER1 * (PKNETWORK_INPUTS + 1) +
+                              PKNETWORK_OUTPUTS * (PKNETWORK_LAYER1 + 1);
 
-        char weights[strlen(PKWeights[i + PKNETWORK_LAYER1]) + 1];
-        strcpy(weights, PKWeights[i + PKNETWORK_LAYER1]);
-        strtok(weights, " ");
-
-        for (int j = 0; j < PKNETWORK_LAYER1; j++)
-            PKNN.layer1Weights[i][j] = atof(strtok(NULL, " "));
-        PKNN.layer1Biases[i] = atof(strtok(NULL, " "));
+    // Read all half-precision values
+    uint16_t *half_data = malloc(total_halfs * sizeof(uint16_t));
+    if (!half_data) {
+        perror("Failed to allocate memory for weights");
+        fclose(file);
+        exit(EXIT_FAILURE);
     }
+
+    size_t read = fread(half_data, sizeof(uint16_t), total_halfs, file);
+    fclose(file);
+
+    if (read != total_halfs) {
+        fprintf(stderr, "Failed to read weights: expected %zu, got %zu\n",
+                total_halfs, read);
+        free(half_data);
+        exit(EXIT_FAILURE);
+    }
+
+    // Convert and load input layer
+    size_t offset = 0;
+    for (int i = 0; i < PKNETWORK_LAYER1; ++i) {
+        for (int j = 0; j < PKNETWORK_INPUTS; ++j) {
+            PKNN.inputWeights[j][i] = half_to_float(half_data[offset + j]);
+        }
+        PKNN.inputBiases[i] = half_to_float(half_data[offset + PKNETWORK_INPUTS]);
+        offset += PKNETWORK_INPUTS + 1;
+    }
+
+    // Convert and load output layer
+    for (int i = 0; i < PKNETWORK_OUTPUTS; ++i) {
+        for (int j = 0; j < PKNETWORK_LAYER1; ++j) {
+            PKNN.layer1Weights[i][j] = half_to_float(half_data[offset + j]);
+        }
+        PKNN.layer1Biases[i] = half_to_float(half_data[offset + PKNETWORK_LAYER1]);
+        offset += PKNETWORK_LAYER1 + 1;
+    }
+
+    free(half_data);
 }
 
 int computePKNetwork(Board *board) {
@@ -77,20 +124,14 @@ int computePKNetwork(Board *board) {
     float layer1Neurons[PKNETWORK_LAYER1];
     float outputNeurons[PKNETWORK_OUTPUTS];
 
-    // Layer 1: Compute the values in the hidden Neurons of Layer 1
-    // by looping over the Kings and Pawns bitboards, and applying
-    // the weight which corresponds to each piece. We break the Kings
-    // into two nearly duplicate steps, in order to more efficiently
-    // set and update the Layer 1 Neurons initially
-
-    { // Do one King first so we can set the Neurons
+    { // First King
         int sq = poplsb(&kings);
         int idx = computePKNetworkIndex(testBit(black, sq), KING, sq);
         for (int i = 0; i < PKNETWORK_LAYER1; i++)
             layer1Neurons[i] = PKNN.inputBiases[i] + PKNN.inputWeights[idx][i];
     }
 
-    { // Do the remaining King as we would do normally
+    { // Second King
         int sq = poplsb(&kings);
         int idx = computePKNetworkIndex(testBit(black, sq), KING, sq);
         for (int i = 0; i < PKNETWORK_LAYER1; i++)
@@ -103,10 +144,6 @@ int computePKNetwork(Board *board) {
         for (int i = 0; i < PKNETWORK_LAYER1; i++)
             layer1Neurons[i] += PKNN.inputWeights[idx][i];
     }
-
-    // Layer 2: Trivially compute the Output layer. Apply a ReLU here.
-    // We do not apply a ReLU in Layer 1, since we already know that all
-    // of the Inputs in Layer 1 are going to be zeros or ones
 
     for (int i = 0; i < PKNETWORK_OUTPUTS; i++) {
         outputNeurons[i] = PKNN.layer1Biases[i];

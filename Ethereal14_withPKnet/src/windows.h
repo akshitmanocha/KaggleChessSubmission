@@ -23,19 +23,19 @@
 #ifdef _WIN32
 
 // Force to include needed API prototypes
-#if _WIN32_WINNT < 0x0601
-#undef  _WIN32_WINNT
-#define _WIN32_WINNT 0x0601
-#endif
+// #if _WIN32_WINNT < 0x0601
+// #undef  _WIN32_WINNT
+// #define _WIN32_WINNT 0x0601
+// #endif
 
-#include <windows.h>
-// The needed Windows API for processor groups could be missed from old Windows
-// versions, so instead of calling them directly (forcing the linker to resolve
-// the calls at compile time), try to load them at runtime. To do this we need
-// first to define the corresponding function pointers.
-typedef int (*fun1_t) (LOGICAL_PROCESSOR_RELATIONSHIP, PSYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX, PDWORD);
-typedef int (*fun2_t) (USHORT, PGROUP_AFFINITY);
-typedef int (*fun3_t) (HANDLE, CONST GROUP_AFFINITY*, PGROUP_AFFINITY);
+// #include <windows.h>
+// // The needed Windows API for processor groups could be missed from old Windows
+// // versions, so instead of calling them directly (forcing the linker to resolve
+// // the calls at compile time), try to load them at runtime. To do this we need
+// // first to define the corresponding function pointers.
+// typedef int (*fun1_t) (LOGICAL_PROCESSOR_RELATIONSHIP, PSYSTEM_LOGICAL_PROCESSOR_INFORMATION_EX, PDWORD);
+// typedef int (*fun2_t) (USHORT, PGROUP_AFFINITY);
+// typedef int (*fun3_t) (HANDLE, CONST GROUP_AFFINITY*, PGROUP_AFFINITY);
 
 #endif
 

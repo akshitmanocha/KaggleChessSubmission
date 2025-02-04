@@ -41,7 +41,7 @@ ifdef OWNER
 endif
 
 WFLAGS   = -std=gnu11 -Wall -Wextra -Wshadow
-RFLAGS   = -Os $(WFLAGS) -DNDEBUG -flto $(NN) $(NNFLAGS) -static -fdata-sections -ffunction-sections -fno-asynchronous-unwind-tables -fno-unwind-tables -fno-rtti
+RFLAGS   = -Os $(WFLAGS) -DNDEBUG -flto $(NN) $(NNFLAGS) -static -fdata-sections -ffunction-sections -fno-asynchronous-unwind-tables -fno-unwind-tables -fno-rtti -Wl,-s
 CFLAGS   = -Os $(WFLAGS) -DNDEBUG -flto $(NN) $(NNFLAGS) -march=native -fdata-sections -ffunction-sections -fno-asynchronous-unwind-tables -fno-unwind-tables -fno-rtti
 TFLAGS   = -Os $(WFLAGS) -DNDEBUG -flto $(NN) $(NNFLAGS) -march=native -fopenmp -DTUNE -fdata-sections -ffunction-sections -fno-asynchronous-unwind-tables -fno-unwind-tables -fno-rtti
 PGOFLAGS = -fno-asynchronous-unwind-tables

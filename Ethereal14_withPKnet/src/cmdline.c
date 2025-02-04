@@ -33,7 +33,7 @@
 #include "tuner.h"
 #include "uci.h"
 
-#include "nnue/nnue.h"
+// #include "nnue/nnue.h"
 
 static void runBenchmark(int argc, char **argv) {
 
@@ -60,7 +60,7 @@ static void runBenchmark(int argc, char **argv) {
     int megabytes = argc > 4 ? atoi(argv[4]) : 16;
 
     if (argc > 5) {
-        nnue_init(argv[5]);
+        // nnue_init(argv[5]);
         printf("info string set EvalFile to %s\n", argv[5]);
     }
 
