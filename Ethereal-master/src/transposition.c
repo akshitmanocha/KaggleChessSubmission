@@ -55,11 +55,28 @@ void tt_prefetch(uint64_t hash) { __builtin_prefetch(&Table.buckets[hash & Table
 int tt_init(int nthreads, int megabytes) {
 
     const uint64_t MB = 1ull << 20;
-    uint64_t keySize = 15ull; // 15ull -> 1mb
+    uint64_t keySize = 15ull;
 
     // Cleanup memory when resizing the table
     if (Table.hashMask) free(Table.buckets);
+
+    // Default keysize of 16 bits maps to a 2MB TTable
+    assert((1ull << 16ull) * sizeof(TTBucket) == 2 * MB);
+
+    // // Find the largest keysize that is still within our given megabytes
+    // while ((1ull << keySize) * sizeof(TTBucket) <= megabytes * MB / 2) keySize++;
+    // assert((1ull << keySize) * sizeof(TTBucket) <= megabytes * MB);
+
+// #if defined(__linux__) && !defined(__ANDROID__)
+
+//     // On Linux systems we align on 2MB boundaries and request Huge Pages
+//     Table.buckets = aligned_alloc(2 * MB, (1ull << keySize) * sizeof(TTBucket));
+//     madvise(Table.buckets, (1ull << keySize) * sizeof(TTBucket), MADV_HUGEPAGE);
+// #else
+
+    // Otherwise, we simply allocate as usual and make no requests
     Table.buckets = malloc((1ull << keySize) * sizeof(TTBucket));
+// #endif
 
     // Save the lookup mask
     Table.hashMask = (1ull << keySize) - 1u;
@@ -120,7 +137,7 @@ void tt_store(uint64_t hash, int height, uint16_t move, int value, int eval, int
     TTEntry *slots = Table.buckets[hash & Table.hashMask].slots;
     TTEntry *replace = slots; // &slots[0]
 
-    // Find a matching hash, or replace using MAX(x1, x2, x3),
+    // Find a matching hash, or replace using MIN(x1, x2, x3),
     // where xN equals the depth minus 4 times the age difference
     for (i = 0; i < TT_BUCKET_NB && slots[i].hash16 != hash16; i++)
         if (   replace->depth - ((259 + Table.generation - replace->generation) & TT_MASK_AGE)
@@ -137,12 +154,15 @@ void tt_store(uint64_t hash, int height, uint16_t move, int value, int eval, int
         && depth < replace->depth - 2)
         return;
 
+    // Don't overwrite a move if we don't have a new one
+    if (move || hash16 != replace->hash16)
+        replace->move = (uint16_t) move;
+
     // Finally, copy the new data into the replaced slot
     replace->depth      = (int8_t  ) depth;
     replace->generation = (uint8_t ) bound | Table.generation;
     replace->value      = (int16_t ) tt_value_to(value, height);
     replace->eval       = (int16_t ) eval;
-    replace->move       = (uint16_t) move;
     replace->hash16     = (uint16_t) hash16;
 }
 
