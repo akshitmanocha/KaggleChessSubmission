@@ -944,12 +944,13 @@ moves_loop: // When in check, search starts from here
                                           nullptr                   , (ss-4)->continuationHistory,
                                           nullptr                   , (ss-6)->continuationHistory };
 
-    Move countermove = thisThread->counterMoves[pos.piece_on(prevSq)][prevSq];
+    // Move countermove = thisThread->counterMoves[pos.piece_on(prevSq)][prevSq];
 
     MovePicker mp(pos, ttMove, depth, &thisThread->mainHistory,
                                       &thisThread->captureHistory,
                                       contHist,
-                                      countermove,
+                                      MOVE_NONE,
+                                    //   countermove,
                                       ss->killers);
 
     value = bestValue;
@@ -1669,11 +1670,11 @@ moves_loop: // When in check, search starts from here
     if (type_of(pos.moved_piece(move)) != PAWN)
         thisThread->mainHistory[us][from_to(reverse_move(move))] << -bonus;
 
-    if (is_ok((ss-1)->currentMove))
-    {
-        Square prevSq = to_sq((ss-1)->currentMove);
-        thisThread->counterMoves[pos.piece_on(prevSq)][prevSq] = move;
-    }
+    // if (is_ok((ss-1)->currentMove))
+    // {
+    //     Square prevSq = to_sq((ss-1)->currentMove);
+    //     thisThread->counterMoves[pos.piece_on(prevSq)][prevSq] = move;
+    // }
   }
 
   // When playing with strength handicap, choose best move among a set of RootMoves
