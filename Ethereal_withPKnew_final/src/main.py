@@ -38,7 +38,7 @@ class ChessEngine:
 
     def get_best_move(self, fen, movetime=100):
         self._send_command(f"position fen {fen}")
-        self._send_command(f"go depth 1 movetime {movetime}")
+        self._send_command(f"go movetime {movetime}")
         best_move = None
         while True:
             output = self._read_output()
