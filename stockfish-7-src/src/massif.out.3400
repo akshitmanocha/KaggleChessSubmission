@@ -1,0 +1,718 @@
+desc: (none)
+cmd: ./stockfish
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2494627
+mem_heap_B=76142
+mem_heap_extra_B=258
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=422590415
+mem_heap_B=4008302
+mem_heap_extra_B=266
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=596901313
+mem_heap_B=4008302
+mem_heap_extra_B=266
+mem_stacks_B=0
+heap_tree=peak
+n3: 4008302 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 3932160 0x404E93: main (in /src/stockfish)
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 3438 in 5 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=4
+#-----------
+time=599550917
+mem_heap_B=86910
+mem_heap_extra_B=266
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=601568622
+mem_heap_B=3106453
+mem_heap_extra_B=1291
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=604217487
+mem_heap_B=3106477
+mem_heap_extra_B=1267
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=606341308
+mem_heap_B=3106185
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=609585846
+mem_heap_B=3106185
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=613005654
+mem_heap_B=3106217
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=614015043
+mem_heap_B=3106201
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=619218403
+mem_heap_B=3106521
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=621883573
+mem_heap_B=3106201
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=624607246
+mem_heap_B=3106201
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3106201 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x41321E: Thread::Thread() (in /src/stockfish)
+  n0: 2097152 0x405472: main (in /src/stockfish)
+ n1: 524351 0x41CCD3: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/stockfish)
+  n0: 524351 0x4054B6: main (in /src/stockfish)
+ n1: 393216 0x413291: Thread::Thread() (in /src/stockfish)
+  n0: 393216 0x405472: main (in /src/stockfish)
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 18778 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=627813421
+mem_heap_B=3106521
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=628874140
+mem_heap_B=3106201
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3106201 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x41321E: Thread::Thread() (in /src/stockfish)
+  n0: 2097152 0x405472: main (in /src/stockfish)
+ n1: 524351 0x41CCD3: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/stockfish)
+  n0: 524351 0x4054B6: main (in /src/stockfish)
+ n1: 393216 0x413291: Thread::Thread() (in /src/stockfish)
+  n0: 393216 0x405472: main (in /src/stockfish)
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 18778 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=633874383
+mem_heap_B=3106265
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=633874445
+mem_heap_B=3106233
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=646920326
+mem_heap_B=3106553
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=646924828
+mem_heap_B=3106233
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=650523706
+mem_heap_B=3106553
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=652937534
+mem_heap_B=3106233
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=658945865
+mem_heap_B=3106265
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=658946115
+mem_heap_B=3106281
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=664994858
+mem_heap_B=3106601
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=665041395
+mem_heap_B=3106281
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3106281 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x41321E: Thread::Thread() (in /src/stockfish)
+  n0: 2097152 0x405472: main (in /src/stockfish)
+ n1: 524351 0x41CCD3: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/stockfish)
+  n0: 524351 0x4054B6: main (in /src/stockfish)
+ n1: 393216 0x413291: Thread::Thread() (in /src/stockfish)
+  n0: 393216 0x405472: main (in /src/stockfish)
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 18858 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=26
+#-----------
+time=701663706
+mem_heap_B=3106601
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=701717116
+mem_heap_B=3106281
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=727551973
+mem_heap_B=3106601
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=727556377
+mem_heap_B=3106281
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3106281 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x41321E: Thread::Thread() (in /src/stockfish)
+  n0: 2097152 0x405472: main (in /src/stockfish)
+ n1: 524351 0x41CCD3: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/stockfish)
+  n0: 524351 0x4054B6: main (in /src/stockfish)
+ n1: 393216 0x413291: Thread::Thread() (in /src/stockfish)
+  n0: 393216 0x405472: main (in /src/stockfish)
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 18858 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=30
+#-----------
+time=785667474
+mem_heap_B=3106601
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=785671878
+mem_heap_B=3106281
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=840396555
+mem_heap_B=3106601
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=840401057
+mem_heap_B=3106281
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=941897416
+mem_heap_B=3106345
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=942413714
+mem_heap_B=3106313
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=1022696668
+mem_heap_B=3106633
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=1022701072
+mem_heap_B=3106313
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=1067740197
+mem_heap_B=3106633
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=1067744601
+mem_heap_B=3106313
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=1227297112
+mem_heap_B=3106633
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=1227376192
+mem_heap_B=3106313
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=1567526249
+mem_heap_B=3106633
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=1567530653
+mem_heap_B=3106313
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=1667559171
+mem_heap_B=3106633
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=1667563575
+mem_heap_B=3106313
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3106313 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x41321E: Thread::Thread() (in /src/stockfish)
+  n0: 2097152 0x405472: main (in /src/stockfish)
+ n1: 524351 0x41CCD3: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/stockfish)
+  n0: 524351 0x4054B6: main (in /src/stockfish)
+ n1: 393216 0x413291: Thread::Thread() (in /src/stockfish)
+  n0: 393216 0x405472: main (in /src/stockfish)
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 18890 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=1949724919
+mem_heap_B=3106633
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=1949729323
+mem_heap_B=3106313
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=2286423405
+mem_heap_B=3106633
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=2286427809
+mem_heap_B=3106313
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=2286466492
+mem_heap_B=3106345
+mem_heap_extra_B=1271
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=2286466812
+mem_heap_B=3106313
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=2286472845
+mem_heap_B=3106826
+mem_heap_extra_B=1270
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=2286498393
+mem_heap_B=3106994
+mem_heap_extra_B=1286
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=2286498552
+mem_heap_B=3106481
+mem_heap_extra_B=1263
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=2286500266
+mem_heap_B=3106313
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3106313 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x41321E: Thread::Thread() (in /src/stockfish)
+  n0: 2097152 0x405472: main (in /src/stockfish)
+ n1: 524351 0x41CCD3: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/stockfish)
+  n0: 524351 0x4054B6: main (in /src/stockfish)
+ n1: 393216 0x413291: Thread::Thread() (in /src/stockfish)
+  n0: 393216 0x405472: main (in /src/stockfish)
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 18890 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=56
+#-----------
+time=2972961485
+mem_heap_B=3106441
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=2972961563
+mem_heap_B=3106377
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=3064720088
+mem_heap_B=3106697
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=3064724492
+mem_heap_B=3106377
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=3064785885
+mem_heap_B=3106409
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=3064786205
+mem_heap_B=3106377
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=3064792238
+mem_heap_B=3106890
+mem_heap_extra_B=1270
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=3064821518
+mem_heap_B=3107088
+mem_heap_extra_B=1288
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=3064821677
+mem_heap_B=3106575
+mem_heap_extra_B=1265
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=3064823541
+mem_heap_B=3106377
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3106377 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x41321E: Thread::Thread() (in /src/stockfish)
+  n0: 2097152 0x405472: main (in /src/stockfish)
+ n1: 524351 0x41CCD3: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/stockfish)
+  n0: 524351 0x4054B6: main (in /src/stockfish)
+ n1: 393216 0x413291: Thread::Thread() (in /src/stockfish)
+  n0: 393216 0x405472: main (in /src/stockfish)
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 18954 in 49 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=66
+#-----------
+time=3433483726
+mem_heap_B=3106697
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=3433488130
+mem_heap_B=3106377
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=3433537633
+mem_heap_B=3106409
+mem_heap_extra_B=1255
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=3433537953
+mem_heap_B=3106377
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=3433543986
+mem_heap_B=3106890
+mem_heap_extra_B=1270
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=3433572022
+mem_heap_B=3107078
+mem_heap_extra_B=1282
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=3433572181
+mem_heap_B=3106565
+mem_heap_extra_B=1259
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=3433573995
+mem_heap_B=3106377
+mem_heap_extra_B=1247
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=74
+#-----------
+time=3433581890
+mem_heap_B=3033673
+mem_heap_extra_B=1239
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=3433583841
+mem_heap_B=3032649
+mem_heap_extra_B=1231
+mem_stacks_B=0
+heap_tree=detailed
+n4: 3032649 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x41321E: Thread::Thread() (in /src/stockfish)
+  n0: 2097152 0x405472: main (in /src/stockfish)
+ n1: 524351 0x41CCD3: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/stockfish)
+  n0: 524351 0x4054B6: main (in /src/stockfish)
+ n1: 393216 0x413291: Thread::Thread() (in /src/stockfish)
+  n0: 393216 0x405472: main (in /src/stockfish)
+ n0: 17930 in 50 places, all below massif's threshold (1.00%)

@@ -1,0 +1,875 @@
+desc: (none)
+cmd: ./Stockfish
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=2298677
+mem_heap_B=72704
+mem_heap_extra_B=8
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=2418345
+mem_heap_B=72752
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=3
+#-----------
+time=2445653
+mem_heap_B=73265
+mem_heap_extra_B=39
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=2456974
+mem_heap_B=73795
+mem_heap_extra_B=37
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=2466394
+mem_heap_B=73728
+mem_heap_extra_B=16
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=2479644
+mem_heap_B=74114
+mem_heap_extra_B=70
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=2489280
+mem_heap_B=74892
+mem_heap_extra_B=164
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=2503134
+mem_heap_B=75834
+mem_heap_extra_B=278
+mem_stacks_B=0
+heap_tree=detailed
+n4: 75834 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+ n1: 2024 0x41C352: std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, UCI::Option, UCI::CaseInsensitiveLess, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, UCI::Option> > >::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [clone .constprop.0] (in /src/Stockfish)
+  n1: 2024 0x0: ???
+   n1: 2024 0x20: ???
+    n1: 2024 0x1: ???
+     n1: 2024 0x41B7C4: void std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_construct<char const*>(char const*, char const*, std::forward_iterator_tag) [clone .constprop.0] (in /src/Stockfish)
+      n1: 2024 0x0: ???
+       n1: 2024 0x24: ???
+        n1: 2024 0x3: ???
+         n1: 2024 0x49AD7AD: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_mutate(unsigned long, unsigned long, char const*, unsigned long) (in /usr/local/lib64/libstdc++.so.6.0.29)
+          n1: 2024 0x49AE77D: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_replace(unsigned long, unsigned long, char const*, unsigned long) (in /usr/local/lib64/libstdc++.so.6.0.29)
+           n1: 2024 0x41C4FA: UCI::init(std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, UCI::Option, UCI::CaseInsensitiveLess, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, UCI::Option> > >&) [clone .constprop.0] (in /src/Stockfish)
+            n1: 2024 0x0: ???
+             n1: 2024 0x28: ???
+              n1: 2024 0xD: ???
+               n1: 2024 0x49AD701: std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >::_M_assign(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&) (in /usr/local/lib64/libstdc++.so.6.0.29)
+                n1: 2024 0x412CC9: UCI::Option::operator<<(UCI::Option const&) (in /src/Stockfish)
+                 n1: 2024 0x28: ???
+                  n1: 2024 0x28: ???
+                   n1: 2024 0x2F: ???
+                    n1: 2024 0x1FFF000827: ???
+                     n1: 2024 0x3: ???
+                      n1: 2024 0x3030300068746F41: ???
+                       n1: 2024 0x2F: ???
+                        n1: 2024 0x1FFF000847: ???
+                         n1: 2024 0x4: ???
+                          n1: 2024 0x6F626D6F62: ???
+                           n1: 2024 0x4DC8ECF: ???
+                            n1: 2024 0x0: ???
+                             n1: 2024 0x2C: ???
+                              n0: 2024 0xB: ???
+ n1: 1024 0x4C4DE2B: _IO_file_doallocate (filedoalloc.c:101)
+  n1: 1024 0x4C5C73F: _IO_doallocbuf (genops.c:347)
+   n1: 1024 0x4C5C73F: _IO_doallocbuf (genops.c:342)
+    n1: 1024 0x4C5B8E7: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+     n1: 1024 0x4C5A9CD: _IO_new_file_xsputn (fileops.c:1244)
+      n1: 1024 0x4C5A9CD: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+       n1: 1024 0x4C4F2AC: fwrite (iofwrite.c:39)
+        n1: 1024 0x499E1A3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/local/lib64/libstdc++.so.6.0.29)
+         n0: 1024 0x4047F1: main (in /src/Stockfish)
+ n0: 82 in 4 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=9
+#-----------
+time=2514252
+mem_heap_B=76386
+mem_heap_extra_B=326
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=2526822
+mem_heap_B=77140
+mem_heap_extra_B=412
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=2537700
+mem_heap_B=77743
+mem_heap_extra_B=529
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=360938822
+mem_heap_B=4009903
+mem_heap_extra_B=537
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=536574349
+mem_heap_B=4009903
+mem_heap_extra_B=537
+mem_stacks_B=0
+heap_tree=detailed
+n3: 4009903 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n0: 3932160 0x404DDA: main (in /src/Stockfish)
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n0: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+ n0: 5039 in 6 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=14
+#-----------
+time=536592574
+mem_heap_B=77820
+mem_heap_extra_B=556
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=536609463
+mem_heap_B=77790
+mem_heap_extra_B=546
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=16
+#-----------
+time=536624868
+mem_heap_B=78005
+mem_heap_extra_B=619
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=536644662
+mem_heap_B=78085
+mem_heap_extra_B=667
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=536664528
+mem_heap_B=78165
+mem_heap_extra_B=715
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=536684390
+mem_heap_B=78245
+mem_heap_extra_B=763
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=536704260
+mem_heap_B=78325
+mem_heap_extra_B=811
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=536714143
+mem_heap_B=78365
+mem_heap_extra_B=835
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=536733999
+mem_heap_B=78445
+mem_heap_extra_B=883
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=536744741
+mem_heap_B=78613
+mem_heap_extra_B=907
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=536764752
+mem_heap_B=78724
+mem_heap_extra_B=956
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=536775011
+mem_heap_B=78764
+mem_heap_extra_B=980
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=536792251
+mem_heap_B=78839
+mem_heap_extra_B=1017
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=536805387
+mem_heap_B=78988
+mem_heap_extra_B=1068
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=536825980
+mem_heap_B=79068
+mem_heap_extra_B=1116
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=536846573
+mem_heap_B=79148
+mem_heap_extra_B=1164
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=536867166
+mem_heap_B=79228
+mem_heap_extra_B=1212
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=31
+#-----------
+time=536877435
+mem_heap_B=79268
+mem_heap_extra_B=1236
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=536894725
+mem_heap_B=79276
+mem_heap_extra_B=1252
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=536908391
+mem_heap_B=79389
+mem_heap_extra_B=1323
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=536918871
+mem_heap_B=79429
+mem_heap_extra_B=1347
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=536930195
+mem_heap_B=79598
+mem_heap_extra_B=1386
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=536940899
+mem_heap_B=79638
+mem_heap_extra_B=1394
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=536954802
+mem_heap_B=8503455
+mem_heap_extra_B=2945
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=536963329
+mem_heap_B=8593855
+mem_heap_extra_B=2961
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=39
+#-----------
+time=536994090
+mem_heap_B=8634815
+mem_heap_extra_B=2969
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=537023015
+mem_heap_B=8634823
+mem_heap_extra_B=2985
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=539173376
+mem_heap_B=9159174
+mem_heap_extra_B=2994
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=539175945
+mem_heap_B=9159494
+mem_heap_extra_B=3034
+mem_stacks_B=0
+heap_tree=detailed
+n3: 9159494 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8423856 0x41D305: ThreadPool::set(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+  n1: 8423856 0x12: ???
+   n0: 8423856 0x41BA2C: std::__cxx11::stof(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*) [clone .constprop.0] [clone .isra.0] (in /src/Stockfish)
+ n0: 524351 0x41D277: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+ n0: 211287 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=43
+#-----------
+time=539712156
+mem_heap_B=9159494
+mem_heap_extra_B=3034
+mem_stacks_B=0
+heap_tree=peak
+n3: 9159494 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8423856 0x41D305: ThreadPool::set(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+  n1: 8423856 0x12: ???
+   n0: 8423856 0x41BA2C: std::__cxx11::stof(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*) [clone .constprop.0] [clone .isra.0] (in /src/Stockfish)
+ n0: 524351 0x41D277: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+ n0: 211287 in 54 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=44
+#-----------
+time=539715333
+mem_heap_B=9159462
+mem_heap_extra_B=3002
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=539746197
+mem_heap_B=9159470
+mem_heap_extra_B=3018
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=46
+#-----------
+time=540283642
+mem_heap_B=9159470
+mem_heap_extra_B=3018
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=540283942
+mem_heap_B=9159462
+mem_heap_extra_B=3002
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=542430743
+mem_heap_B=9159542
+mem_heap_extra_B=3010
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=542431061
+mem_heap_B=9160015
+mem_heap_extra_B=3041
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=542432297
+mem_heap_B=9160072
+mem_heap_extra_B=3056
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=51
+#-----------
+time=542445195
+mem_heap_B=9160015
+mem_heap_extra_B=3041
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=542449777
+mem_heap_B=9160982
+mem_heap_extra_B=3034
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=542464108
+mem_heap_B=9161030
+mem_heap_extra_B=3042
+mem_stacks_B=0
+heap_tree=detailed
+n3: 9161030 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8423856 0x41D305: ThreadPool::set(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+  n1: 8423856 0x12: ???
+   n0: 8423856 0x41BA2C: std::__cxx11::stof(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*) [clone .constprop.0] [clone .isra.0] (in /src/Stockfish)
+ n0: 524351 0x41D277: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+ n0: 212823 in 58 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=54
+#-----------
+time=542464466
+mem_heap_B=9161278
+mem_heap_extra_B=3090
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=542464780
+mem_heap_B=9161574
+mem_heap_extra_B=3130
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=542465146
+mem_heap_B=9161394
+mem_heap_extra_B=3182
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=542465674
+mem_heap_B=9161786
+mem_heap_extra_B=3222
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=542466014
+mem_heap_B=9161806
+mem_heap_extra_B=3322
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=542466884
+mem_heap_B=9162586
+mem_heap_extra_B=3382
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=542467234
+mem_heap_B=9163558
+mem_heap_extra_B=3450
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=61
+#-----------
+time=542468320
+mem_heap_B=9163566
+mem_heap_extra_B=3490
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=542468665
+mem_heap_B=9163578
+mem_heap_extra_B=3550
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=542469010
+mem_heap_B=9163590
+mem_heap_extra_B=3610
+mem_stacks_B=0
+heap_tree=detailed
+n3: 9163590 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8423856 0x41D305: ThreadPool::set(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+  n1: 8423856 0x12: ???
+   n0: 8423856 0x41BA2C: std::__cxx11::stof(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*) [clone .constprop.0] [clone .isra.0] (in /src/Stockfish)
+ n0: 524351 0x41D277: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+ n0: 215383 in 61 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=64
+#-----------
+time=542469355
+mem_heap_B=9163602
+mem_heap_extra_B=3670
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=542469700
+mem_heap_B=9163614
+mem_heap_extra_B=3730
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=542470045
+mem_heap_B=9163626
+mem_heap_extra_B=3790
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=542470390
+mem_heap_B=9163638
+mem_heap_extra_B=3850
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=542477723
+mem_heap_B=9164151
+mem_heap_extra_B=3873
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=542487696
+mem_heap_B=9164208
+mem_heap_extra_B=3888
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=542489070
+mem_heap_B=9163695
+mem_heap_extra_B=3865
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=71
+#-----------
+time=542490341
+mem_heap_B=9163752
+mem_heap_extra_B=3880
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=72
+#-----------
+time=542503239
+mem_heap_B=9163695
+mem_heap_extra_B=3865
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=73
+#-----------
+time=542503676
+mem_heap_B=9163634
+mem_heap_extra_B=3830
+mem_stacks_B=0
+heap_tree=detailed
+n3: 9163634 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8423856 0x41D305: ThreadPool::set(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+  n1: 8423856 0x12: ???
+   n0: 8423856 0x41BA2C: std::__cxx11::stof(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*) [clone .constprop.0] [clone .isra.0] (in /src/Stockfish)
+ n0: 524351 0x41D277: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+ n0: 215427 in 61 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=74
+#-----------
+time=542504000
+mem_heap_B=9163598
+mem_heap_extra_B=3650
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=75
+#-----------
+time=542504324
+mem_heap_B=9163562
+mem_heap_extra_B=3470
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=76
+#-----------
+time=542505319
+mem_heap_B=9162044
+mem_heap_extra_B=3460
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=77
+#-----------
+time=542509394
+mem_heap_B=9162022
+mem_heap_extra_B=3442
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=78
+#-----------
+time=543185749
+mem_heap_B=9162040
+mem_heap_extra_B=3464
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=79
+#-----------
+time=543192204
+mem_heap_B=9162022
+mem_heap_extra_B=3442
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=80
+#-----------
+time=543366379
+mem_heap_B=9162502
+mem_heap_extra_B=3450
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=81
+#-----------
+time=543372505
+mem_heap_B=9162022
+mem_heap_extra_B=3442
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=82
+#-----------
+time=543372925
+mem_heap_B=9162022
+mem_heap_extra_B=3442
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=83
+#-----------
+time=543380338
+mem_heap_B=9162535
+mem_heap_extra_B=3465
+mem_stacks_B=0
+heap_tree=detailed
+n3: 9162535 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8423856 0x41D305: ThreadPool::set(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+  n1: 8423856 0x12: ???
+   n0: 8423856 0x41BA2C: std::__cxx11::stof(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*) [clone .constprop.0] [clone .isra.0] (in /src/Stockfish)
+ n0: 524351 0x41D277: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+ n0: 214328 in 62 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=84
+#-----------
+time=543391522
+mem_heap_B=9162624
+mem_heap_extra_B=3480
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=85
+#-----------
+time=543392933
+mem_heap_B=9162022
+mem_heap_extra_B=3442
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=86
+#-----------
+time=543415792
+mem_heap_B=9162030
+mem_heap_extra_B=3458
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=87
+#-----------
+time=543541706
+mem_heap_B=9162506
+mem_heap_extra_B=3446
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=88
+#-----------
+time=543547431
+mem_heap_B=9162026
+mem_heap_extra_B=3438
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=89
+#-----------
+time=543547851
+mem_heap_B=9162026
+mem_heap_extra_B=3438
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=90
+#-----------
+time=543554081
+mem_heap_B=9162539
+mem_heap_extra_B=3461
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=91
+#-----------
+time=543562662
+mem_heap_B=9162634
+mem_heap_extra_B=3470
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=92
+#-----------
+time=543564103
+mem_heap_B=9162026
+mem_heap_extra_B=3438
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=93
+#-----------
+time=543628714
+mem_heap_B=9162042
+mem_heap_extra_B=3446
+mem_stacks_B=0
+heap_tree=detailed
+n3: 9162042 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 8423856 0x41D305: ThreadPool::set(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+  n1: 8423856 0x12: ???
+   n0: 8423856 0x41BA2C: std::__cxx11::stof(std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const&, unsigned long*) [clone .constprop.0] [clone .isra.0] (in /src/Stockfish)
+ n0: 524351 0x41D277: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/Stockfish)
+ n0: 213835 in 63 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=94
+#-----------
+time=543633514
+mem_heap_B=9089330
+mem_heap_extra_B=3422
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=95
+#-----------
+time=543635460
+mem_heap_B=9088306
+mem_heap_extra_B=3414
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=96
+#-----------
+time=543637818
+mem_heap_B=9086994
+mem_heap_extra_B=3398
+mem_stacks_B=0
+heap_tree=empty

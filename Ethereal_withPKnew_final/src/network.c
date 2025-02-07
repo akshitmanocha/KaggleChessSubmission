@@ -46,50 +46,50 @@
 
 PKNetwork PKNN;
 
-/* Half-precision (16-bit) to single-precision (32-bit) float conversion */
-static float half_to_float(uint16_t h) {
-    uint32_t sign = (h >> 15) & 0x1;
-    uint32_t exponent = (h >> 10) & 0x1F;
-    uint32_t mantissa = h & 0x3FF;
+// /* Half-precision (16-bit) to single-precision (32-bit) float conversion */
+// static float half_to_float(uint16_t h) {
+//     uint32_t sign = (h >> 15) & 0x1;
+//     uint32_t exponent = (h >> 10) & 0x1F;
+//     uint32_t mantissa = h & 0x3FF;
 
-    uint32_t f32_sign = sign << 31;
-    uint32_t f32_exponent;
-    uint32_t f32_mantissa;
+//     uint32_t f32_sign = sign << 31;
+//     uint32_t f32_exponent;
+//     uint32_t f32_mantissa;
 
-    if (exponent == 0) { // Denormal or zero
-        if (mantissa == 0) {
-            return *(float*)&f32_sign; // Zero
-        }
-        // Denormal: normalize it
-        exponent = 127 - 14; // FP16 exponent bias: 15, FP32 bias: 127
-        while ((mantissa & 0x400) == 0) {
-            mantissa <<= 1;
-            exponent--;
-        }
-        mantissa &= 0x3FF;
-        f32_exponent = exponent << 23;
-        f32_mantissa = mantissa << 13;
-    } else if (exponent == 0x1F) { // Inf/NaN
-        f32_exponent = 0xFF << 23;
-        f32_mantissa = mantissa ? 0x7FFFFF : 0; // NaN or Inf
-    } else { // Normalized
-        f32_exponent = (exponent + (127 - 15)) << 23;
-        f32_mantissa = mantissa << 13;
-    }
+//     if (exponent == 0) { // Denormal or zero
+//         if (mantissa == 0) {
+//             return *(float*)&f32_sign; // Zero
+//         }
+//         // Denormal: normalize it
+//         exponent = 127 - 14; // FP16 exponent bias: 15, FP32 bias: 127
+//         while ((mantissa & 0x400) == 0) {
+//             mantissa <<= 1;
+//             exponent--;
+//         }
+//         mantissa &= 0x3FF;
+//         f32_exponent = exponent << 23;
+//         f32_mantissa = mantissa << 13;
+//     } else if (exponent == 0x1F) { // Inf/NaN
+//         f32_exponent = 0xFF << 23;
+//         f32_mantissa = mantissa ? 0x7FFFFF : 0; // NaN or Inf
+//     } else { // Normalized
+//         f32_exponent = (exponent + (127 - 15)) << 23;
+//         f32_mantissa = mantissa << 13;
+//     }
 
-    uint32_t f32 = f32_sign | f32_exponent | f32_mantissa;
-    return *(float*)&f32;
-}
+//     uint32_t f32 = f32_sign | f32_exponent | f32_mantissa;
+//     return *(float*)&f32;
+// }
 
-/* Helper to read little-endian fp16 values */
-static uint16_t read_half(FILE *file) {
-    unsigned char bytes[2];
-    if (fread(bytes, 1, 2, file) != 2) {
-        perror("Error reading half-precision float");
-        exit(1);
-    }
-    return bytes[0] | (bytes[1] << 8);
-}
+// /* Helper to read little-endian fp16 values */
+// static uint16_t read_half(FILE *file) {
+//     unsigned char bytes[2];
+//     if (fread(bytes, 1, 2, file) != 2) {
+//         perror("Error reading half-precision float");
+//         exit(1);
+//     }
+//     return bytes[0] | (bytes[1] << 8);
+// }
 
 void initPKNetwork() {
     FILE *file = NULL;
@@ -111,21 +111,29 @@ void initPKNetwork() {
     // Read input layer weights and biases
     for (int i = 0; i < PKNETWORK_LAYER1; i++) {
         for (int j = 0; j < PKNETWORK_INPUTS; j++) {
-            uint16_t weight16 = read_half(file);
-            PKNN.inputWeights[j][i] = half_to_float(weight16);
+            if (fread(&PKNN.inputWeights[j][i], sizeof(float), 1, file) != 1) {
+                perror("Error reading input weights");
+                exit(1);
+            }
         }
-        uint16_t bias16 = read_half(file);
-        PKNN.inputBiases[i] = half_to_float(bias16);
+        if (fread(&PKNN.inputBiases[i], sizeof(float), 1, file) != 1) {
+            perror("Error reading input biases");
+            exit(1);
+        }
     }
 
     // Read output layer weights and biases
     for (int i = 0; i < PKNETWORK_OUTPUTS; i++) {
         for (int j = 0; j < PKNETWORK_LAYER1; j++) {
-            uint16_t weight16 = read_half(file);
-            PKNN.layer1Weights[i][j] = half_to_float(weight16);
+            if (fread(&PKNN.layer1Weights[i][j], sizeof(float), 1, file) != 1) {
+                perror("Error reading layer1 weights");
+                exit(1);
+            }
         }
-        uint16_t bias16 = read_half(file);
-        PKNN.layer1Biases[i] = half_to_float(bias16);
+        if (fread(&PKNN.layer1Biases[i], sizeof(float), 1, file) != 1) {
+            perror("Error reading layer1 biases");
+            exit(1);
+        }
     }
 
     fclose(file);

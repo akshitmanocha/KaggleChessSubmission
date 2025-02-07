@@ -1,0 +1,286 @@
+Stockfish 7 64 by T. Romstad, M. Costalba, J. Kiiski, G. Linscott
+id name Stockfish 7 64
+id author T. Romstad, M. Costalba, J. Kiiski, G. Linscott
+
+option name Write Debug Log type check default false
+option name Contempt type spin default 0 min -100 max 100
+option name Threads type spin default 1 min 1 max 128
+option name Hash type spin default 16 min 1 max 1048576
+option name Clear Hash type button
+option name Ponder type check default false
+option name MultiPV type spin default 1 min 1 max 500
+option name Skill Level type spin default 20 min 0 max 20
+option name Move Overhead type spin default 30 min 0 max 5000
+option name Minimum Thinking Time type spin default 20 min 0 max 5000
+option name Slow Mover type spin default 84 min 10 max 1000
+option name nodestime type spin default 0 min 0 max 10000
+option name UCI_Chess960 type check default false
+uciok
+readyok
+bestmove a2a3
+--------------------------------------------------------------------------------
+Command:            ./stockfish
+Massif arguments:   --massif-out-file=massif.out
+ms_print arguments: massif.out
+--------------------------------------------------------------------------------
+
+
+    MB
+3.826^                                                  :::::::::::::::::::::#
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+     |                                                  :                    #
+   0 +----------------------------------------------------------------------->Mi
+     0                                                                   575.2
+
+Number of snapshots: 88
+ Detailed snapshots: [9 (peak), 17, 35, 56, 66, 76, 86]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1      2,297,956           72,712           72,704             8            0
+  2      2,418,006           72,768           72,752            16            0
+  3      2,445,300           73,304           73,265            39            0
+  4      2,456,675           76,904           76,866            38            0
+  5      2,470,391           77,216           77,168            48            0
+  6      2,479,011           77,816           77,720            96            0
+  7      2,491,229           79,472           79,214           258            0
+  8    422,587,017        4,011,640        4,011,374           266            0
+  9    596,897,915        4,011,640        4,011,374           266            0
+99.99% (4,011,374B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->98.02% (3,932,160B) 0x404E93: main (in /src/stockfish)
+| 
+->01.81% (72,704B) 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+| ->01.81% (72,704B) 0x400FFE1: call_init.part.0 (dl-init.c:72)
+|   ->01.81% (72,704B) 0x40100E8: call_init (dl-init.c:30)
+|     ->01.81% (72,704B) 0x40100E8: _dl_init (dl-init.c:119)
+|       ->01.81% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.16% (6,510B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 10    596,897,915           79,472           79,214           258            0
+ 11    599,547,519           90,248           89,982           266            0
+ 12    599,548,592        2,187,408        2,187,134           274            0
+ 13    600,203,994        2,580,632        2,580,350           282            0
+ 14    600,367,981        2,580,656        2,580,366           290            0
+ 15    600,385,460        2,580,736        2,580,427           309            0
+ 16    600,401,851        2,580,696        2,580,397           299            0
+ 17    600,419,060        2,580,856        2,580,525           331            0
+99.99% (2,580,525B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->81.26% (2,097,152B) 0x41321E: Thread::Thread() (in /src/stockfish)
+| ->81.26% (2,097,152B) 0x405472: main (in /src/stockfish)
+|   
+->15.24% (393,216B) 0x413291: Thread::Thread() (in /src/stockfish)
+| ->15.24% (393,216B) 0x405472: main (in /src/stockfish)
+|   
+->02.82% (72,704B) 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+| ->02.82% (72,704B) 0x400FFE1: call_init.part.0 (dl-init.c:72)
+|   ->02.82% (72,704B) 0x40100E8: call_init (dl-init.c:30)
+|     ->02.82% (72,704B) 0x40100E8: _dl_init (dl-init.c:119)
+|       ->02.82% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.68% (17,453B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 18    600,439,127        2,581,136        2,580,748           388            0
+ 19    600,456,794        2,581,296        2,580,876           420            0
+ 20    600,474,449        2,581,456        2,581,004           452            0
+ 21    600,483,397        2,581,536        2,581,068           468            0
+ 22    600,501,091        2,581,696        2,581,196           500            0
+ 23    600,509,930        2,581,776        2,581,260           516            0
+ 24    600,527,656        2,581,936        2,581,388           548            0
+ 25    600,545,188        2,582,096        2,581,516           580            0
+ 26    600,562,054        2,582,288        2,581,674           614            0
+ 27    600,572,664        2,582,368        2,581,739           629            0
+ 28    600,591,133        2,582,528        2,581,867           661            0
+ 29    600,609,625        2,582,688        2,581,995           693            0
+ 30    600,628,188        2,582,848        2,582,123           725            0
+ 31    600,646,811        2,583,024        2,582,252           772            0
+ 32    600,665,927        2,583,184        2,582,381           803            0
+ 33    600,675,760        2,583,264        2,582,445           819            0
+ 34    600,692,368        2,583,528        2,582,718           810            0
+ 35    600,711,590        3,108,056        3,107,191           865            0
+99.97% (3,107,191B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->67.47% (2,097,152B) 0x41321E: Thread::Thread() (in /src/stockfish)
+| ->67.47% (2,097,152B) 0x405472: main (in /src/stockfish)
+|   
+->16.87% (524,351B) 0x41CCD3: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/stockfish)
+| ->16.87% (524,351B) 0x4054B6: main (in /src/stockfish)
+|   
+->12.65% (393,216B) 0x413291: Thread::Thread() (in /src/stockfish)
+| ->12.65% (393,216B) 0x405472: main (in /src/stockfish)
+|   
+->02.34% (72,704B) 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+| ->02.34% (72,704B) 0x400FFE1: call_init.part.0 (dl-init.c:72)
+|   ->02.34% (72,704B) 0x40100E8: call_init (dl-init.c:30)
+|     ->02.34% (72,704B) 0x40100E8: _dl_init (dl-init.c:119)
+|       ->02.34% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.64% (19,768B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 36    600,725,713        3,107,984        3,107,134           850            0
+ 37    600,737,997        3,112,072        3,111,221           851            0
+ 38    600,746,114        3,112,104        3,111,246           858            0
+ 39    600,786,394        3,112,016        3,111,173           843            0
+ 40    600,802,065        3,112,056        3,111,204           852            0
+ 41    600,820,374        3,112,056        3,111,204           852            0
+ 42    602,415,022        3,112,128        3,111,265           863            0
+ 43    602,422,164        3,112,224        3,111,355           869            0
+ 44    602,436,689        3,112,472        3,111,555           917            0
+ 45    602,450,793        3,112,400        3,111,497           903            0
+ 46    602,465,112        3,113,024        3,112,058           966            0
+ 47    602,477,249        3,114,328        3,113,022         1,306            0
+ 48    603,163,180        3,114,192        3,112,901         1,291            0
+ 49    603,172,178        3,110,544        3,110,101           443            0
+ 50    603,172,245        3,110,520        3,110,085           435            0
+ 51    603,172,273        3,110,464        3,110,037           427            0
+ 52    603,172,316        3,110,440        3,110,021           419            0
+ 53    603,172,344        3,110,384        3,109,973           411            0
+ 54    603,172,395        3,110,360        3,109,957           403            0
+ 55    603,172,423        3,110,304        3,109,909           395            0
+ 56    603,172,466        3,110,280        3,109,893           387            0
+99.99% (3,109,893B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->67.43% (2,097,152B) 0x41321E: Thread::Thread() (in /src/stockfish)
+| ->67.43% (2,097,152B) 0x405472: main (in /src/stockfish)
+|   
+->16.86% (524,351B) 0x41CCD3: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/stockfish)
+| ->16.86% (524,351B) 0x4054B6: main (in /src/stockfish)
+|   
+->12.64% (393,216B) 0x413291: Thread::Thread() (in /src/stockfish)
+| ->12.64% (393,216B) 0x405472: main (in /src/stockfish)
+|   
+->02.34% (72,704B) 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+| ->02.34% (72,704B) 0x400FFE1: call_init.part.0 (dl-init.c:72)
+|   ->02.34% (72,704B) 0x40100E8: call_init (dl-init.c:30)
+|     ->02.34% (72,704B) 0x40100E8: _dl_init (dl-init.c:119)
+|       ->02.34% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->00.72% (22,470B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 57    603,172,494        3,110,224        3,109,845           379            0
+ 58    603,172,553        3,110,200        3,109,829           371            0
+ 59    603,172,581        3,110,144        3,109,781           363            0
+ 60    603,172,624        3,110,120        3,109,765           355            0
+ 61    603,172,652        3,110,064        3,109,717           347            0
+ 62    603,172,690        2,716,840        2,716,501           339            0
+ 63    603,172,720          619,680          619,349           331            0
+ 64    603,174,729          608,904          608,581           323            0
+ 65    603,177,570          608,416          608,101           315            0
+ 66    603,177,604          608,344          608,037           307            0
+99.95% (608,037B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->86.19% (524,351B) 0x41CCD3: TranspositionTable::resize(unsigned long) [clone .constprop.0] (in /src/stockfish)
+| ->86.19% (524,351B) 0x4054B6: main (in /src/stockfish)
+|   
+->11.95% (72,704B) 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+| ->11.95% (72,704B) 0x400FFE1: call_init.part.0 (dl-init.c:72)
+|   ->11.95% (72,704B) 0x40100E8: call_init (dl-init.c:30)
+|     ->11.95% (72,704B) 0x40100E8: _dl_init (dl-init.c:119)
+|       ->11.95% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->01.35% (8,192B) 0x4C4DE2B: _IO_file_doallocate (filedoalloc.c:101)
+| ->01.35% (8,192B) 0x4C5C73F: _IO_doallocbuf (genops.c:347)
+|   ->01.35% (8,192B) 0x4C5C73F: _IO_doallocbuf (genops.c:342)
+|     ->01.35% (8,192B) in 2 places, all below massif's threshold (1.00%)
+|       
+->00.46% (2,790B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 67    603,177,633          608,256          607,957           299            0
+ 68    603,177,792          608,232          607,949           283            0
+ 69    603,177,858           83,872           83,598           274            0
+ 70    603,179,736           83,672           83,414           258            0
+ 71    603,179,823           83,472           83,230           242            0
+ 72    603,179,901           83,272           83,046           226            0
+ 73    603,179,997           83,072           82,862           210            0
+ 74    603,180,075           82,872           82,678           194            0
+ 75    603,180,162           82,672           82,494           178            0
+ 76    603,180,249           82,472           82,310           162            0
+99.80% (82,310B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->88.16% (72,704B) 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+| ->88.16% (72,704B) 0x400FFE1: call_init.part.0 (dl-init.c:72)
+|   ->88.16% (72,704B) 0x40100E8: call_init (dl-init.c:30)
+|     ->88.16% (72,704B) 0x40100E8: _dl_init (dl-init.c:119)
+|       ->88.16% (72,704B) 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+|         
+->09.93% (8,192B) 0x4C4DE2B: _IO_file_doallocate (filedoalloc.c:101)
+| ->09.93% (8,192B) 0x4C5C73F: _IO_doallocbuf (genops.c:347)
+|   ->09.93% (8,192B) 0x4C5C73F: _IO_doallocbuf (genops.c:342)
+|     ->04.97% (4,096B) 0x4C5B68B: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+|     | ->04.97% (4,096B) 0x4C5C7F1: _IO_default_uflow (genops.c:362)
+|     |   ->04.97% (4,096B) 0x4C56C87: getc (getc.c:40)
+|     |     ->04.97% (4,096B) 0x4975DD0: __gnu_cxx::stdio_sync_filebuf<char, std::char_traits<char> >::underflow() (in /usr/local/lib64/libstdc++.so.6.0.29)
+|     |       ->04.97% (4,096B) 0x4932C39: std::basic_istream<char, std::char_traits<char> >& std::getline<char, std::char_traits<char>, std::allocator<char> >(std::basic_istream<char, std::char_traits<char> >&, std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&, char) (in /usr/local/lib64/libstdc++.so.6.0.29)
+|     |         ->04.97% (4,096B) 0x4198BA: UCI::loop(int, char**) (in /src/stockfish)
+|     |           ->04.97% (4,096B) 0x4054CE: main (in /src/stockfish)
+|     |             
+|     ->04.97% (4,096B) 0x4C5B8E7: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|       ->04.97% (4,096B) 0x4C5A9CD: _IO_new_file_xsputn (fileops.c:1244)
+|         ->04.97% (4,096B) 0x4C5A9CD: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|           ->04.97% (4,096B) 0x4C4F2AC: fwrite (iofwrite.c:39)
+|             ->04.97% (4,096B) 0x499E1A3: std::basic_ostream<char, std::char_traits<char> >& std::__ostream_insert<char, std::char_traits<char> >(std::basic_ostream<char, std::char_traits<char> >&, char const*, long) (in /usr/local/lib64/libstdc++.so.6.0.29)
+|               ->04.97% (4,096B) 0x4047B5: main (in /src/stockfish)
+|                 
+->01.34% (1,104B) 0x41ED86: std::map<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >, UCI::Option, UCI::CaseInsensitiveLess, std::allocator<std::pair<std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> > const, UCI::Option> > >::operator[](std::__cxx11::basic_string<char, std::char_traits<char>, std::allocator<char> >&&) [clone .constprop.0] (in /src/stockfish)
+| ->01.34% (1,104B) in 13 places, all below massif's threshold (1.00%)
+|   
+->00.38% (310B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 77    603,180,327           82,272           82,126           146            0
+ 78    603,180,432           82,072           81,942           130            0
+ 79    603,180,508           82,016           81,920            96            0
+ 80    603,180,537           81,816           81,736            80            0
+ 81    603,180,624           81,616           81,552            64            0
+ 82    603,180,702           81,416           81,368            48            0
+ 83    603,180,789           81,216           81,184            32            0
+ 84    603,186,765            8,504            8,480            24            0
+ 85    603,188,398            4,400            4,384            16            0
+ 86    603,188,430              296              288             8            0
+97.30% (288B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->97.30% (288B) 0x4012D16: allocate_dtv (dl-tls.c:343)
+| ->97.30% (288B) 0x4012D16: _dl_allocate_tls (dl-tls.c:589)
+|   ->97.30% (288B) 0x484FB81: allocate_stack (allocatestack.c:622)
+|     ->97.30% (288B) 0x484FB81: pthread_create@@GLIBC_2.2.5 (pthread_create.c:660)
+|       ->97.30% (288B) 0x4944929: std::thread::_M_start_thread(std::unique_ptr<std::thread::_State, std::default_delete<std::thread::_State> >, void (*)()) (in /usr/local/lib64/libstdc++.so.6.0.29)
+|         ->97.30% (288B) 0x4133AA: Thread::Thread() (in /src/stockfish)
+|           ->97.30% (288B) 0x405472: main (in /src/stockfish)
+|             
+->00.00% (0B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 87    603,190,756                0                0             0            0

@@ -1,0 +1,876 @@
+desc: (none)
+cmd: ./stockfish bench
+time_unit: i
+#-----------
+snapshot=0
+#-----------
+time=0
+mem_heap_B=0
+mem_heap_extra_B=0
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=1
+#-----------
+time=434105337
+mem_heap_B=4012147
+mem_heap_extra_B=1021
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=2
+#-----------
+time=608416281
+mem_heap_B=4012147
+mem_heap_extra_B=1021
+mem_stacks_B=0
+heap_tree=peak
+n3: 4012147 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 3932160 0x404F83: ??? (in /src/stockfish)
+  n1: 3932160 0x7F8080808080807F: ???
+   n1: 3932160 0x7DFF: ???
+    n1: 3932160 0x520937: ???
+     n1: 3932160 0x7FFFFFFFFFFFFFFF: ???
+      n1: 3932160 0x4DC968F: ???
+       n1: 3932160 0x1FFF000A07: ???
+        n0: 3932160 0x1: ???
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n1: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFF000C0A: ???
+        n0: 72704 0x1FFF000C16: ???
+ n0: 7283 in 7 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=3
+#-----------
+time=921660094
+mem_heap_B=3112224
+mem_heap_extra_B=2608
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=4
+#-----------
+time=1178796812
+mem_heap_B=3112868
+mem_heap_extra_B=2644
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=5
+#-----------
+time=1484298803
+mem_heap_B=3112512
+mem_heap_extra_B=2608
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=6
+#-----------
+time=1827923730
+mem_heap_B=3112192
+mem_heap_extra_B=2600
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=7
+#-----------
+time=2130180355
+mem_heap_B=3112512
+mem_heap_extra_B=2608
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=8
+#-----------
+time=2577220513
+mem_heap_B=3113982
+mem_heap_extra_B=3162
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=9
+#-----------
+time=2821340405
+mem_heap_B=3114068
+mem_heap_extra_B=3132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=10
+#-----------
+time=3277513582
+mem_heap_B=3113982
+mem_heap_extra_B=3162
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=11
+#-----------
+time=3622123830
+mem_heap_B=3114068
+mem_heap_extra_B=3132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=12
+#-----------
+time=4007519686
+mem_heap_B=3114068
+mem_heap_extra_B=3132
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=13
+#-----------
+time=4309708625
+mem_heap_B=3113224
+mem_heap_extra_B=2912
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=14
+#-----------
+time=4639998371
+mem_heap_B=3113910
+mem_heap_extra_B=2946
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=15
+#-----------
+time=5027299619
+mem_heap_B=3113832
+mem_heap_extra_B=2920
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3113832 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x4127E8: ??? (in /src/stockfish)
+  n1: 2097152 0x1101: ???
+   n1: 2097152 0x580045CF: ??? (ms_main.c:1197)
+    n0: 2097152 0x2A0F: ???
+ n1: 524351 0x41E007: ??? (in /src/stockfish)
+  n1: 524351 0xFF: ???
+   n1: 524351 0x4055F1: ??? (in /src/stockfish)
+    n1: 524351 0x402DFFFFFFFFFFFF: ???
+     n1: 524351 0x40109291E8E3181A: ???
+      n1: 524351 0x7FFF: ???
+       n1: 524351 0x3FFF: ???
+        n1: 524351 0x104DC968F: ???
+         n1: 524351 0x1FFF000A07: ???
+          n1: 524351 0x3F00000001: ???
+           n1: 524351 0x509C9F: ???
+            n1: 524351 0x100000007: ???
+             n1: 524351 0xFFFFFFFFFFFFFFF7: ???
+              n1: 524351 0x1FFF0007CF: ???
+               n1: 524351 0x6: ???
+                n1: 524351 0x3E7974706D653B: ???
+                 n1: 524351 0x20: ???
+                  n1: 524351 0x1FFF0007EF: ???
+                   n1: 524351 0x3: ???
+                    n1: 524351 0x6150790068736147: ???
+                     n1: 524351 0x40082F1A9F006873: ???
+                      n1: 524351 0x6FFFFFFFF: ???
+                       n0: 524351 0x8: ???
+ n1: 393216 0x41285B: ??? (in /src/stockfish)
+  n1: 393216 0x1101: ???
+   n1: 393216 0x580045CF: ??? (ms_main.c:1197)
+    n0: 393216 0x2A0F: ???
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n1: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFF000C0A: ???
+        n0: 72704 0x1FFF000C16: ???
+ n0: 26409 in 52 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=16
+#-----------
+time=5490978581
+mem_heap_B=3113836
+mem_heap_extra_B=2956
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=17
+#-----------
+time=5879474614
+mem_heap_B=3113960
+mem_heap_extra_B=2968
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=18
+#-----------
+time=6174644820
+mem_heap_B=3113352
+mem_heap_extra_B=2936
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=19
+#-----------
+time=6521145617
+mem_heap_B=3113992
+mem_heap_extra_B=2944
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=20
+#-----------
+time=6909024323
+mem_heap_B=3113880
+mem_heap_extra_B=3184
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=21
+#-----------
+time=7304893757
+mem_heap_B=3113976
+mem_heap_extra_B=3160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=22
+#-----------
+time=7712017910
+mem_heap_B=3113976
+mem_heap_extra_B=3160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=23
+#-----------
+time=8002617206
+mem_heap_B=3113208
+mem_heap_extra_B=3152
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=24
+#-----------
+time=8399542239
+mem_heap_B=3113976
+mem_heap_extra_B=3160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=25
+#-----------
+time=8765563675
+mem_heap_B=3113976
+mem_heap_extra_B=3160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=26
+#-----------
+time=9008178237
+mem_heap_B=3113976
+mem_heap_extra_B=3160
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=27
+#-----------
+time=9370792082
+mem_heap_B=3113388
+mem_heap_extra_B=2908
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=28
+#-----------
+time=9637838326
+mem_heap_B=3113388
+mem_heap_extra_B=2908
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=29
+#-----------
+time=9950676400
+mem_heap_B=3113452
+mem_heap_extra_B=2916
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=30
+#-----------
+time=10201851012
+mem_heap_B=3114060
+mem_heap_extra_B=2916
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3114060 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x4127E8: ??? (in /src/stockfish)
+  n1: 2097152 0x1101: ???
+   n1: 2097152 0x580045CF: ??? (ms_main.c:1197)
+    n0: 2097152 0x2A0F: ???
+ n1: 524351 0x41E007: ??? (in /src/stockfish)
+  n1: 524351 0xFF: ???
+   n1: 524351 0x4055F1: ??? (in /src/stockfish)
+    n1: 524351 0x402DFFFFFFFFFFFF: ???
+     n1: 524351 0x40109291E8E3181A: ???
+      n1: 524351 0x7FFF: ???
+       n1: 524351 0x3FFF: ???
+        n1: 524351 0x104DC968F: ???
+         n1: 524351 0x1FFF000A07: ???
+          n1: 524351 0x3F00000001: ???
+           n1: 524351 0x509C9F: ???
+            n1: 524351 0x100000007: ???
+             n1: 524351 0xFFFFFFFFFFFFFFF7: ???
+              n1: 524351 0x1FFF0007CF: ???
+               n1: 524351 0x6: ???
+                n1: 524351 0x3E7974706D653B: ???
+                 n1: 524351 0x20: ???
+                  n1: 524351 0x1FFF0007EF: ???
+                   n1: 524351 0x3: ???
+                    n1: 524351 0x6150790068736147: ???
+                     n1: 524351 0x40082F1A9F006873: ???
+                      n1: 524351 0x6FFFFFFFF: ???
+                       n0: 524351 0x8: ???
+ n1: 393216 0x41285B: ??? (in /src/stockfish)
+  n1: 393216 0x1101: ???
+   n1: 393216 0x580045CF: ??? (ms_main.c:1197)
+    n0: 393216 0x2A0F: ???
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n1: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFF000C0A: ???
+        n0: 72704 0x1FFF000C16: ???
+ n0: 26637 in 52 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=31
+#-----------
+time=10616282540
+mem_heap_B=3113184
+mem_heap_extra_B=3192
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=32
+#-----------
+time=11046907954
+mem_heap_B=3113997
+mem_heap_extra_B=3211
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=33
+#-----------
+time=11447484137
+mem_heap_B=3113356
+mem_heap_extra_B=3172
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=34
+#-----------
+time=11660264992
+mem_heap_B=3113460
+mem_heap_extra_B=3156
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=35
+#-----------
+time=11973782924
+mem_heap_B=3114260
+mem_heap_extra_B=3164
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=36
+#-----------
+time=12184656366
+mem_heap_B=3114260
+mem_heap_extra_B=3164
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=37
+#-----------
+time=12546823589
+mem_heap_B=3114044
+mem_heap_extra_B=3284
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=38
+#-----------
+time=12982598836
+mem_heap_B=3114228
+mem_heap_extra_B=3260
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3114228 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x4127E8: ??? (in /src/stockfish)
+  n1: 2097152 0x1101: ???
+   n1: 2097152 0x580045CF: ??? (ms_main.c:1197)
+    n0: 2097152 0x2A0F: ???
+ n1: 524351 0x41E007: ??? (in /src/stockfish)
+  n1: 524351 0xFF: ???
+   n1: 524351 0x4055F1: ??? (in /src/stockfish)
+    n1: 524351 0x402DFFFFFFFFFFFF: ???
+     n1: 524351 0x40109291E8E3181A: ???
+      n1: 524351 0x7FFF: ???
+       n1: 524351 0x3FFF: ???
+        n1: 524351 0x104DC968F: ???
+         n1: 524351 0x1FFF000A07: ???
+          n1: 524351 0x3F00000001: ???
+           n1: 524351 0x509C9F: ???
+            n1: 524351 0x100000007: ???
+             n1: 524351 0xFFFFFFFFFFFFFFF7: ???
+              n1: 524351 0x1FFF0007CF: ???
+               n1: 524351 0x6: ???
+                n1: 524351 0x3E7974706D653B: ???
+                 n1: 524351 0x20: ???
+                  n1: 524351 0x1FFF0007EF: ???
+                   n1: 524351 0x3: ???
+                    n1: 524351 0x6150790068736147: ???
+                     n1: 524351 0x40082F1A9F006873: ???
+                      n1: 524351 0x6FFFFFFFF: ???
+                       n0: 524351 0x8: ???
+ n1: 393216 0x41285B: ??? (in /src/stockfish)
+  n1: 393216 0x1101: ???
+   n1: 393216 0x580045CF: ??? (ms_main.c:1197)
+    n0: 393216 0x2A0F: ???
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n1: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFF000C0A: ???
+        n0: 72704 0x1FFF000C16: ???
+ n0: 26805 in 52 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=39
+#-----------
+time=13465511787
+mem_heap_B=3113268
+mem_heap_extra_B=2892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=40
+#-----------
+time=13976735003
+mem_heap_B=3113812
+mem_heap_extra_B=2892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=41
+#-----------
+time=14285545967
+mem_heap_B=3113364
+mem_heap_extra_B=2892
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=42
+#-----------
+time=14770337441
+mem_heap_B=3113824
+mem_heap_extra_B=2840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=43
+#-----------
+time=15208288832
+mem_heap_B=3113824
+mem_heap_extra_B=2840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=44
+#-----------
+time=15549582019
+mem_heap_B=3113824
+mem_heap_extra_B=2840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=45
+#-----------
+time=15775370324
+mem_heap_B=3113824
+mem_heap_extra_B=2840
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3113824 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x4127E8: ??? (in /src/stockfish)
+  n1: 2097152 0x1101: ???
+   n1: 2097152 0x580045CF: ??? (ms_main.c:1197)
+    n0: 2097152 0x2A0F: ???
+ n1: 524351 0x41E007: ??? (in /src/stockfish)
+  n1: 524351 0xFF: ???
+   n1: 524351 0x4055F1: ??? (in /src/stockfish)
+    n1: 524351 0x402DFFFFFFFFFFFF: ???
+     n1: 524351 0x40109291E8E3181A: ???
+      n1: 524351 0x7FFF: ???
+       n1: 524351 0x3FFF: ???
+        n1: 524351 0x104DC968F: ???
+         n1: 524351 0x1FFF000A07: ???
+          n1: 524351 0x3F00000001: ???
+           n1: 524351 0x509C9F: ???
+            n1: 524351 0x100000007: ???
+             n1: 524351 0xFFFFFFFFFFFFFFF7: ???
+              n1: 524351 0x1FFF0007CF: ???
+               n1: 524351 0x6: ???
+                n1: 524351 0x3E7974706D653B: ???
+                 n1: 524351 0x20: ???
+                  n1: 524351 0x1FFF0007EF: ???
+                   n1: 524351 0x3: ???
+                    n1: 524351 0x6150790068736147: ???
+                     n1: 524351 0x40082F1A9F006873: ???
+                      n1: 524351 0x6FFFFFFFF: ???
+                       n0: 524351 0x8: ???
+ n1: 393216 0x41285B: ??? (in /src/stockfish)
+  n1: 393216 0x1101: ???
+   n1: 393216 0x580045CF: ??? (ms_main.c:1197)
+    n0: 393216 0x2A0F: ???
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n1: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFF000C0A: ???
+        n0: 72704 0x1FFF000C16: ???
+ n0: 26401 in 52 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=46
+#-----------
+time=16205377467
+mem_heap_B=3113824
+mem_heap_extra_B=2840
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=47
+#-----------
+time=16384537534
+mem_heap_B=3113824
+mem_heap_extra_B=2904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=48
+#-----------
+time=16845758795
+mem_heap_B=3113824
+mem_heap_extra_B=2904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=49
+#-----------
+time=17208294574
+mem_heap_B=3113824
+mem_heap_extra_B=2904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=50
+#-----------
+time=17424445529
+mem_heap_B=3113824
+mem_heap_extra_B=2904
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3113824 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x4127E8: ??? (in /src/stockfish)
+  n1: 2097152 0x1101: ???
+   n1: 2097152 0x580045CF: ??? (ms_main.c:1197)
+    n0: 2097152 0x2A0F: ???
+ n1: 524351 0x41E007: ??? (in /src/stockfish)
+  n1: 524351 0xFF: ???
+   n1: 524351 0x4055F1: ??? (in /src/stockfish)
+    n1: 524351 0x402DFFFFFFFFFFFF: ???
+     n1: 524351 0x40109291E8E3181A: ???
+      n1: 524351 0x7FFF: ???
+       n1: 524351 0x3FFF: ???
+        n1: 524351 0x104DC968F: ???
+         n1: 524351 0x1FFF000A07: ???
+          n1: 524351 0x3F00000001: ???
+           n1: 524351 0x509C9F: ???
+            n1: 524351 0x100000007: ???
+             n1: 524351 0xFFFFFFFFFFFFFFF7: ???
+              n1: 524351 0x1FFF0007CF: ???
+               n1: 524351 0x6: ???
+                n1: 524351 0x3E7974706D653B: ???
+                 n1: 524351 0x20: ???
+                  n1: 524351 0x1FFF0007EF: ???
+                   n1: 524351 0x3: ???
+                    n1: 524351 0x6150790068736147: ???
+                     n1: 524351 0x40082F1A9F006873: ???
+                      n1: 524351 0x6FFFFFFFF: ???
+                       n0: 524351 0x8: ???
+ n1: 393216 0x41285B: ??? (in /src/stockfish)
+  n1: 393216 0x1101: ???
+   n1: 393216 0x580045CF: ??? (ms_main.c:1197)
+    n0: 393216 0x2A0F: ???
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n1: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFF000C0A: ???
+        n0: 72704 0x1FFF000C16: ???
+ n0: 26401 in 52 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=51
+#-----------
+time=17748375176
+mem_heap_B=3113824
+mem_heap_extra_B=2904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=52
+#-----------
+time=18065964788
+mem_heap_B=3113344
+mem_heap_extra_B=2904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=53
+#-----------
+time=18264384713
+mem_heap_B=3113856
+mem_heap_extra_B=2904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=54
+#-----------
+time=18468489883
+mem_heap_B=3113856
+mem_heap_extra_B=2904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=55
+#-----------
+time=18661077459
+mem_heap_B=3113888
+mem_heap_extra_B=2904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=56
+#-----------
+time=18933220018
+mem_heap_B=3113888
+mem_heap_extra_B=2904
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=57
+#-----------
+time=19128225647
+mem_heap_B=3113764
+mem_heap_extra_B=2740
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=58
+#-----------
+time=19312093757
+mem_heap_B=3113764
+mem_heap_extra_B=2740
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=59
+#-----------
+time=19522924342
+mem_heap_B=3113412
+mem_heap_extra_B=2740
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=60
+#-----------
+time=19705163272
+mem_heap_B=3114132
+mem_heap_extra_B=3244
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3114132 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x4127E8: ??? (in /src/stockfish)
+  n1: 2097152 0x1101: ???
+   n1: 2097152 0x580045CF: ??? (ms_main.c:1197)
+    n0: 2097152 0x2A0F: ???
+ n1: 524351 0x41E007: ??? (in /src/stockfish)
+  n1: 524351 0xFF: ???
+   n1: 524351 0x4055F1: ??? (in /src/stockfish)
+    n1: 524351 0x402DFFFFFFFFFFFF: ???
+     n1: 524351 0x40109291E8E3181A: ???
+      n1: 524351 0x7FFF: ???
+       n1: 524351 0x3FFF: ???
+        n1: 524351 0x104DC968F: ???
+         n1: 524351 0x1FFF000A07: ???
+          n1: 524351 0x3F00000001: ???
+           n1: 524351 0x509C9F: ???
+            n1: 524351 0x100000007: ???
+             n1: 524351 0xFFFFFFFFFFFFFFF7: ???
+              n1: 524351 0x1FFF0007CF: ???
+               n1: 524351 0x6: ???
+                n1: 524351 0x3E7974706D653B: ???
+                 n1: 524351 0x20: ???
+                  n1: 524351 0x1FFF0007EF: ???
+                   n1: 524351 0x3: ???
+                    n1: 524351 0x6150790068736147: ???
+                     n1: 524351 0x40082F1A9F006873: ???
+                      n1: 524351 0x6FFFFFFFF: ???
+                       n0: 524351 0x8: ???
+ n1: 393216 0x41285B: ??? (in /src/stockfish)
+  n1: 393216 0x1101: ???
+   n1: 393216 0x580045CF: ??? (ms_main.c:1197)
+    n0: 393216 0x2A0F: ???
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n1: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFF000C0A: ???
+        n0: 72704 0x1FFF000C16: ???
+ n0: 26709 in 52 places, all below massif's threshold (1.00%)
+#-----------
+snapshot=61
+#-----------
+time=19880640989
+mem_heap_B=3113328
+mem_heap_extra_B=2464
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=62
+#-----------
+time=20084742992
+mem_heap_B=3113112
+mem_heap_extra_B=2472
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=63
+#-----------
+time=20261850820
+mem_heap_B=3113264
+mem_heap_extra_B=2488
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=64
+#-----------
+time=20571457982
+mem_heap_B=3113456
+mem_heap_extra_B=2488
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=65
+#-----------
+time=20777220013
+mem_heap_B=3113508
+mem_heap_extra_B=2604
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=66
+#-----------
+time=20961303411
+mem_heap_B=3113508
+mem_heap_extra_B=2604
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=67
+#-----------
+time=21192109770
+mem_heap_B=3113508
+mem_heap_extra_B=2604
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=68
+#-----------
+time=21389106148
+mem_heap_B=3113508
+mem_heap_extra_B=2604
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=69
+#-----------
+time=21625318423
+mem_heap_B=3113572
+mem_heap_extra_B=2604
+mem_stacks_B=0
+heap_tree=empty
+#-----------
+snapshot=70
+#-----------
+time=21892605866
+mem_heap_B=3113572
+mem_heap_extra_B=2604
+mem_stacks_B=0
+heap_tree=detailed
+n5: 3113572 (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+ n1: 2097152 0x4127E8: ??? (in /src/stockfish)
+  n1: 2097152 0x1101: ???
+   n1: 2097152 0x580045CF: ??? (ms_main.c:1197)
+    n0: 2097152 0x2A0F: ???
+ n1: 524351 0x41E007: ??? (in /src/stockfish)
+  n1: 524351 0xFF: ???
+   n1: 524351 0x4055F1: ??? (in /src/stockfish)
+    n1: 524351 0x402DFFFFFFFFFFFF: ???
+     n1: 524351 0x40109291E8E3181A: ???
+      n1: 524351 0x7FFF: ???
+       n1: 524351 0x3FFF: ???
+        n1: 524351 0x104DC968F: ???
+         n1: 524351 0x1FFF000A07: ???
+          n1: 524351 0x3F00000001: ???
+           n1: 524351 0x509C9F: ???
+            n1: 524351 0x100000007: ???
+             n1: 524351 0xFFFFFFFFFFFFFFF7: ???
+              n1: 524351 0x1FFF0007CF: ???
+               n1: 524351 0x6: ???
+                n1: 524351 0x3E7974706D653B: ???
+                 n1: 524351 0x20: ???
+                  n1: 524351 0x1FFF0007EF: ???
+                   n1: 524351 0x3: ???
+                    n1: 524351 0x6150790068736147: ???
+                     n1: 524351 0x40082F1A9F006873: ???
+                      n1: 524351 0x6FFFFFFFF: ???
+                       n0: 524351 0x8: ???
+ n1: 393216 0x41285B: ??? (in /src/stockfish)
+  n1: 393216 0x1101: ???
+   n1: 393216 0x580045CF: ??? (ms_main.c:1197)
+    n0: 393216 0x2A0F: ???
+ n1: 72704 0x4916849: ??? (in /usr/local/lib64/libstdc++.so.6.0.29)
+  n1: 72704 0x400FFE1: call_init.part.0 (dl-init.c:72)
+   n1: 72704 0x40100E8: call_init (dl-init.c:30)
+    n1: 72704 0x40100E8: _dl_init (dl-init.c:119)
+     n1: 72704 0x40010C9: ??? (in /lib/x86_64-linux-gnu/ld-2.31.so)
+      n1: 72704 0x1: ???
+       n1: 72704 0x1FFF000C0A: ???
+        n0: 72704 0x1FFF000C16: ???
+ n0: 26149 in 52 places, all below massif's threshold (1.00%)

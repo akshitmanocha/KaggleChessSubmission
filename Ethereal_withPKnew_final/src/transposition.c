@@ -55,7 +55,7 @@ void tt_prefetch(uint64_t hash) { __builtin_prefetch(&Table.buckets[hash & Table
 int tt_init(int nthreads, int megabytes) {
 
     const uint64_t MB = 1ull << 20;
-    uint64_t keySize = 15ull; // 15ull -> 1mb
+    uint64_t keySize = 14ull; // 15ull -> 1mb
 
     // Cleanup memory when resizing the table
     if (Table.hashMask) free(Table.buckets);
