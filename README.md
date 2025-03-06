@@ -70,6 +70,7 @@ The following were removed:
 - Endgame book
 - Print statements
 - Chess 960 support
+
 Also, the file was compressed first with 7z, then gz.
 
 #### Memory Reductions
