@@ -1,8 +1,4 @@
 # FIDE & Google Efficient Chess AI Challenge Submission
-## Ethereal Chess Engine - Memory Optimized Version
-
-### Overview
-Ethereal Chess Engine is a competitive chess engine optimized for memory-constrained environments. This version has been specifically tuned to operate within strict memory limits while maintaining strong playing strength.
 
 ### Competition Specifications
 
