@@ -1,5 +1,10 @@
 # FIDE & Google Efficient Chess AI Challenge Submission
 
+## Ethereal and Cfish Chess Engine - Memory Optimized Version
+
+### Overview
+Ethereal Chess Engine is a competitive chess engine optimized for memory-constrained environments. This version has been specifically tuned to operate within strict memory limits while maintaining strong playing strength. We also optimized Cfish. For this competition, we noticed that C was the best programming language in terms of memory efficiency, and better than C++.
+
 ### Competition Specifications
 
 #### Time Controls
@@ -58,3 +63,20 @@
 - Memory efficiency without sacrificing playing strength
 - Robust time management for 10s games
 - Optimization for single-core performance
+
+### Cfish
+#### File Size Reductions
+The following were removed:
+- Openings poly book
+- Endgame book
+- Print statements
+- Chess 960 support
+
+Also, the file was compressed first with 7z, then gz.
+
+#### Memory Reductions
+The memory reductions were the same as Ethereal. Other things were tried, but they did not help or hurt the performance.
+
+#### Testing
+Local testing was done between different versions to check for improvements or degradation as kaggle submissions were limited per day.
+The matchups were tracked in an excel sheet along with the specific commit.
